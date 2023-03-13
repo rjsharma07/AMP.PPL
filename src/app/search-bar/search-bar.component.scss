@@ -1,0 +1,17 @@
+.search-bar-container {
+    padding: 20px 60px;
+    border-bottom: 0.063rem solid rgba(0, 0, 0, .2);
+
+    .input-bar {
+        padding-left: 16px;
+        border: 0.063rem solid rgba(0, 0, 0, .2);
+        border-radius: 0.15rem;
+        box-shadow: 0 0.938rem 2.25rem hsl(0deg 0% 42% / 15%);
+        color: rgba(0, 0, 0, .7);
+        font-size: .75rem;
+        font-weight: 400;
+        height: 2rem;
+        line-height: 1rem;
+        width: 100%;
+    }
+}

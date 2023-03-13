@@ -1,0 +1,79 @@
+.container {
+    display: flex;
+
+    .main-pane {
+        background: #f8f8f8;
+        width: 100%;
+        padding: 0 2rem;
+
+        .main-pane-path {
+            font-size: 0.8rem;
+
+            .path-title {
+                color: #007da8;
+            }
+        }
+
+        .top-part {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .favorites-title {
+                display: flex;
+                font-size: 0.75rem;
+            }
+        }
+
+        .card-pane {
+            padding: 12px 16px;
+            display: flex;
+            flex-wrap: wrap;
+
+            .example-card {
+                max-width: 250px;
+                margin: 0 8px;
+
+                .card-tag-box {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    .tag-title {
+                        font-size: 0.6rem;
+                        border: 1px solid #007da8;
+                        border-radius: 5px;
+                        padding: 4px 8px;
+                        color: #007da8;
+                    }
+                }
+
+                .logo {
+                    max-width: 400px;
+                    max-height: 60px;
+                }
+
+                .card-title {
+                    font-size: 0.85rem;
+                }
+
+                .card-description {
+                    font-size: 0.7rem;
+                    max-width: 150px;
+                }
+
+                .card-location {
+                    margin-top: 2rem;
+                    font-size: 0.7rem;
+                }
+
+                .card-url {
+                    font-size: 0.7rem;
+                    max-width: 150px;
+                    word-wrap: break-word;
+                }
+            }
+        }
+    }
+}
