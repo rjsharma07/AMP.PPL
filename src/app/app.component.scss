@@ -1,10 +1,11 @@
 .container {
     display: flex;
+    height: 100%;
 
     .main-pane {
         background: #f8f8f8;
         width: 100%;
-        padding: 0 2rem;
+        padding: 0 1rem;
 
         .main-pane-path {
             font-size: 0.8rem;
@@ -19,6 +20,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
+            padding: 0 8px;
 
             .favorites-title {
                 display: flex;
@@ -27,13 +29,13 @@
         }
 
         .card-pane {
-            padding: 12px 16px;
+            padding: 8px 0;
             display: flex;
             flex-wrap: wrap;
 
             .example-card {
-                max-width: 250px;
-                margin: 0 8px;
+                width: 20%;
+                margin: 0 0.5rem;
 
                 .card-tag-box {
                     display: flex;

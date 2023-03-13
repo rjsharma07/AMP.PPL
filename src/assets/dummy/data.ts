@@ -98,10 +98,6 @@ export const resultArray: any[] = [
                 tagName: 'Alliance Partner',
                 tagId: 1,
             },
-            {
-                tagName: 'Bronze Partner',
-                tagId: 2,
-            }
         ],
         isFavourite: false,
         isBookmarked: false,

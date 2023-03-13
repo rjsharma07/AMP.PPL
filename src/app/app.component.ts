@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/services/data.service';
-import { Result, Location, Products, Specialization } from 'src/models/common';
+import { Result } from 'src/models/common';
 
 @Component({
   selector: 'app-root',
@@ -11,36 +11,16 @@ export class AppComponent implements OnInit {
   title = 'AMP.PPL';
   count: number = 0;
   resultArray: Result[] = [];
-  locationArray: Location[] = [];
-  productsArray: Products[] = [];
-  specializaionArray: Specialization[] = [];
-  viewFav : boolean = false;
+  viewFav: boolean = false;
+  favoriteArray: any[] = [];
 
   constructor(private service: DataService) { }
 
   ngOnInit(): void {
-    this.getLocationData()
-    this.getProductData()
     this.getResultData()
-    this.getSpecializedData()
-    
+
   }
 
-  getLocationData() {
-    this.service.location().subscribe((res) => {
-      // console.log(res)
-    })
-  }
-  getProductData() {
-    this.service.product().subscribe((res) => {
-      // console.log(res)
-    })
-  }
-  getSpecializedData() {
-    this.service.special().subscribe((res) => {
-      // console.log(res)
-    })
-  }
   getResultData() {
     this.service.result().subscribe((res) => {
       this.count = res.length;
@@ -48,7 +28,17 @@ export class AppComponent implements OnInit {
     })
   }
 
-  toggleFav(){
-    
+  toggleFav() {
+    this.viewFav = !this.viewFav; 
+    if (this.viewFav) {
+      this.resultArray = this.resultArray.filter((i) => i.isFavourite === true)
+    }
+    else {
+      this.getResultData();
+    }
   }
+  
+  // this.viewFav = !this.viewFav;
+  // this.resultArray = this.testArray;
+  // this.resultArray = this.resultArray.filter((i) => i.isFavourite === this.viewFav);
 }

@@ -14,7 +14,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { DataService } from 'src/services/data.service';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {MatCardModule} from '@angular/material/card';
     MatSelectModule,
     MatSidenavModule,
     MatSlideToggleModule,
-    MatCardModule
+    MatCardModule,
+    MatCheckboxModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
