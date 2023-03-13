@@ -67,12 +67,12 @@ export const specializationArray: any = [
 ]
 export const resultArray: any[] = [
     {
-        logo: 'https://socialbox-bckt.s3.ap-south-1.amazonaws.com/Images/rohitsharma45/rohitsharma45_recent_image_1.png',
+        logo: 'https://www.praecipio.com/hubfs/Praecipio_Hori_RGB.svg',
         name: 'Praecipio',
         title: 'Praecipio',
         description: 'No Description',
-        location: 'Texas Us',
-        url: 'https://www.shutterstock.com/image-photo/los-angeles-california-usa-19-december-1692241096',
+        location: 'Texas, US',
+        url: 'www.praecipio.com/solutions/atlassian',
         tags: [
             {
                 tagName: 'Alliance Partner',
@@ -87,12 +87,12 @@ export const resultArray: any[] = [
         isBookmarked: true,
         isActive: true
     }, {
-        logo: 'https://socialbox-bckt.s3.ap-south-1.amazonaws.com/Images/rohitsharma45/rohitsharma45_recent_image_1.png',
-        name: 'Praecipio',
-        title: 'Praecipio',
+        logo: 'https://www.praecipio.com/hubfs/Praecipio_Hori_RGB.svg',
+        name: 'Adaptavist',
+        title: 'Adaptavist',
         description: 'No Description',
-        location: 'Texas Us',
-        url: 'https://www.shutterstock.com/image-photo/los-angeles-california-usa-19-december-1692241096',
+        location: 'London, UK',
+        url: 'www.adaptavist.com',
         tags: [
             {
                 tagName: 'Alliance Partner',
@@ -103,12 +103,12 @@ export const resultArray: any[] = [
         isBookmarked: false,
         isActive: true
     }, {
-        logo: 'https://socialbox-bckt.s3.ap-south-1.amazonaws.com/Images/rohitsharma45/rohitsharma45_recent_image_1.png',
-        name: 'Praecipio',
-        title: 'Praecipio',
+        logo: 'https://veniture.net/hs-fs/hubfs/vXA_horizontal_logo-v2-standard-transparent-footer.png?width=400&name=vXA_horizontal_logo-v2-standard-transparent-footer.png',
+        name: 'VenITure',
+        title: 'VenITure',
         description: 'No Description',
-        location: 'Texas Us',
-        url: 'https://www.shutterstock.com/image-photo/los-angeles-california-usa-19-december-1692241096',
+        location: 'NRW, Germany',
+        url: 'veniture.net/',
         tags: [
             {
                 tagName: 'Alliance Partner',
@@ -123,12 +123,12 @@ export const resultArray: any[] = [
         isBookmarked: true,
         isActive: true
     }, {
-        logo: 'https://socialbox-bckt.s3.ap-south-1.amazonaws.com/Images/rohitsharma45/rohitsharma45_recent_image_1.png',
-        name: 'Praecipio',
-        title: 'Praecipio',
+        logo: 'https://www.blendedperspectives.com/wp-content/uploads/2022/12/Blended-Perspectives-Atlassian-Platinum-Solution-Partner-now-a-contegix-company.png',
+        name: 'Blended Perspectives',
+        title: 'Blended Perspectives',
         description: 'No Description',
-        location: 'Texas Us',
-        url: 'https://www.shutterstock.com/image-photo/los-angeles-california-usa-19-december-1692241096',
+        location: 'Toronto, Canada',
+        url: 'www.blendedperspectives.com/',
         tags: [
             {
                 tagName: 'Alliance Partner',
@@ -142,5 +142,41 @@ export const resultArray: any[] = [
         isFavourite: true,
         isBookmarked: true,
         isActive: true
-    },
+    }, {
+        logo: 'https://www.isostech.com/hubfs/isos%20technology%20logo.png',
+        name: 'Isos Technology',
+        title: 'Isos Technology',
+        description: 'No Description',
+        location: 'AZ, US',
+        url: 'www.isostech.com/atlassian-partner1',
+        tags: [
+            {
+                tagName: 'Alliance Partner',
+                tagId: 1,
+            },
+        ],
+        isFavourite: false,
+        isBookmarked: false,
+        isActive: true
+    }, {
+        logo: 'https://d33wubrfki0l68.cloudfront.net/f0a0d3a59029396ec506b60dcbf169c6c98c257e/02241/img/logo.png',
+        name: 'GLiNTECH',
+        title: 'GLiNTECH',
+        description: 'No Description',
+        location: 'New South Wales, Australia',
+        url: 'www.glintech.com/',
+        tags: [
+            {
+                tagName: 'Alliance Partner',
+                tagId: 1,
+            },
+            {
+                tagName: 'Bronze Partner',
+                tagId: 2,
+            }
+        ],
+        isFavourite: true,
+        isBookmarked: true,
+        isActive: true
+    }
 ]

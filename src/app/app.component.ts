@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   resultArray: Result[] = [];
   viewFav: boolean = false;
   favoriteArray: any[] = [];
+  isBookmark: boolean = false;
 
   constructor(private service: DataService) { }
 
@@ -38,7 +39,11 @@ export class AppComponent implements OnInit {
     }
   }
   
-  // this.viewFav = !this.viewFav;
-  // this.resultArray = this.testArray;
-  // this.resultArray = this.resultArray.filter((i) => i.isFavourite === this.viewFav);
+  getBackground(index: number) {
+    return index % 2 === 0 ? 'bg-light' : 'bg-dark';
+  }
+
+  bookmark() {
+    this.isBookmark = !this.isBookmark;
+  }
 }

@@ -1,9 +1,9 @@
 .container {
     display: flex;
-    height: 100%;
+    height: auto;
 
     .main-pane {
-        background: #f8f8f8;
+        background-color: #f8f8f8;
         width: 100%;
         padding: 0 1rem;
 
@@ -34,8 +34,10 @@
             flex-wrap: wrap;
 
             .example-card {
-                width: 20%;
-                margin: 0 0.5rem;
+                width: 18%;
+                margin: 0.75rem;
+                overflow: hidden;
+                height: 100%;
 
                 .card-tag-box {
                     display: flex;
@@ -43,26 +45,24 @@
                     align-items: center;
 
                     .tag-title {
-                        font-size: 0.6rem;
+                        font-size: 0.7rem;
                         border: 1px solid #007da8;
                         border-radius: 5px;
-                        padding: 4px 8px;
-                        color: #007da8;
+                        padding: 4px 12px;
                     }
                 }
 
                 .logo {
-                    max-width: 400px;
+                    max-width: 200px;
                     max-height: 60px;
                 }
 
                 .card-title {
-                    font-size: 0.85rem;
+                    font-weight: bold;
                 }
 
                 .card-description {
-                    font-size: 0.7rem;
-                    max-width: 150px;
+                    color: #808080;
                 }
 
                 .card-location {
@@ -72,10 +72,43 @@
 
                 .card-url {
                     font-size: 0.7rem;
-                    max-width: 150px;
-                    word-wrap: break-word;
                 }
             }
         }
     }
 }
+
+.bg-dark {
+    background-color: #A7727D;
+    color: #FFFFFF;
+}
+
+.bg-light {
+    background-color: #C9EEFF;
+    color: #007da8;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+mat-card-content {
+    padding: 1rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.mat-card-content {
+    margin-bottom: 0!important;
+}
+
+.card-img {
+    min-height: 65px;
+}
+

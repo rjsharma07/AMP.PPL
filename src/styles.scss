@@ -10,3 +10,15 @@ body {
 app-sidebar {
     width: 20%;
 }
+
+mat-card {
+    padding: 0 !important;
+}
+
+.mat-card-header-text {
+    margin: 7px 4px !important;
+
+    .mat-card-title {
+        margin-bottom: 0 !important;
+    }
+}
