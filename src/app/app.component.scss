@@ -6,12 +6,13 @@
     margin-top: 4.6rem;
 
     .main-pane {
-        background-color: #f8f8f8;
+        background-color: #f1f2f6;
         width: 100%;
         padding: 0 1rem;
 
         .main-pane-path {
             font-size: 0.8rem;
+            margin: 2.5rem 0 1rem 0.5rem;
 
             .path-title {
                 color: #007da8;
@@ -124,7 +125,7 @@ mat-card-content {
     left: 0;
     height: auto;
     z-index: 4;
-    background-color: #f8f8f8;
+    background-color: #f8f9fb;
 }
 
 .sidebar-container {
@@ -134,7 +135,7 @@ mat-card-content {
     left: 0;
     z-index: 3;
     height: 90vh;
-    background-color: #f8f8f8;
+    background-color: #f8f9fb;
 }
 
 @media screen and (max-width: 1280px) {
