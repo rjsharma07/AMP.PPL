@@ -1,6 +1,9 @@
 .container {
     display: flex;
     height: auto;
+    width: 82%;
+    margin-left: auto;
+    margin-top: 4.6rem;
 
     .main-pane {
         background-color: #f8f8f8;
@@ -112,3 +115,21 @@ mat-card-content {
     min-height: 65px;
 }
 
+.searchbar-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    z-index: 3;
+    background-color: #f8f8f8;
+}
+
+.sidebar-container {
+    width: 18%;
+    position: fixed;
+    top: 10.2vh;
+    left: 0;
+    z-index: 3;
+    height: 90vh;
+}
