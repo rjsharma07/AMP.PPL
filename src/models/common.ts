@@ -24,5 +24,8 @@ export interface Result {
     tags: Array<any>,
     isFavourite: boolean,
     isBookmarked: boolean,
-    isActive: boolean
+    isActive: boolean,
+    rating: number,
+    specialization: Array<any>,
+    products: Array<any>
 }

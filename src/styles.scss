@@ -26,3 +26,50 @@ mat-card {
 .mat-select-trigger {
     height: 100% !important;
 }
+
+.mat-card-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-card-avatar {
+    height: 30px;
+    width: auto;
+    margin-top: 5px;
+}
+
+.mat-drawer-content {
+    overflow: hidden !important;
+}
+
+.mat-expansion-panel{
+    background: none !important;
+}
+
+.mat-expansion-panel-header {
+    padding-left: 0 !important;
+}
+
+.mat-expansion-panel-body {
+    padding: 8px 24px 16px !important;
+    padding-left: 0 !important;
+}
+
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: none !important;
+}
+
+.mat-expansion-panel-header.mat-expanded {
+    height: auto !important;
+}
+
+.mat-select-value {
+    display: table-cell;
+    max-width: 0;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 5px !important;
+    padding-top: 5px !important;
+}

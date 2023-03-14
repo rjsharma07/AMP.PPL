@@ -1,3 +1,4 @@
 <div class="search-bar-container">
-    <input type=" text" matInput placeholder="Search" class="input-bar" placeholder="Search Partner By Name">
+    <input type=" text" placeholder="Search" class="input-bar" placeholder="Search Partner By Name" name="name"
+        [(ngModel)]="searchKeyword" (input)="call($event)" autocomplete="off">
 </div>

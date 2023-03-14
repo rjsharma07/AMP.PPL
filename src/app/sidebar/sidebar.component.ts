@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { DataService } from 'src/services/data.service';
 import { Location, Products, Specialization } from 'src/models/common';
 
@@ -9,9 +9,14 @@ import { Location, Products, Specialization } from 'src/models/common';
 })
 export class SidebarComponent implements OnInit {
 
+  @Output() filterSpecialization = new EventEmitter();
+  @Output() filterProduct = new EventEmitter();
   locationArray: Location[] = [];
   specializedArray: Specialization[] = [];
   productsArray: Products[] = [];
+  panelOpenState: boolean = true;
+  filterOptionsSpecialization: any[] = [];
+  filterOptionsProducts: any[] = [];
 
   constructor(private service: DataService) { }
 
@@ -36,5 +41,15 @@ export class SidebarComponent implements OnInit {
     this.service.product().subscribe((res) => {
       this.productsArray = res
     })
+  }
+
+  toggleProducts(item: any) {
+    this.filterOptionsProducts.push(item)
+    this.filterProduct.emit(this.filterOptionsProducts)
+  }
+
+  toggleSpecializtion(item: any) {
+    this.filterOptionsSpecialization.push(item)
+    this.filterSpecialization.emit(this.filterOptionsSpecialization)
   }
 }

@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { locationArray, specializationArray, productArray, resultArray } from 'src/assets/dummy/data';
+import { Location, Products, Result, Specialization } from 'src/models/common';
 @Injectable()
 export class DataService {
-    location() {
+    location(): Observable<Location[]> {
         return of(locationArray)
     }
-    special() {
+    special(): Observable<Specialization[]> {
         return of(specializationArray)
     }
-    product() {
+    product(): Observable<Products[]> {
         return of(productArray)
     }
-    result() {
-        return of(resultArray)
+    result(): Observable<Result[]> {
+        return of(resultArray);
     }
 }

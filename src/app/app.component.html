@@ -1,19 +1,20 @@
 <div class="searchbar-container">
-    <app-search-bar></app-search-bar>
+    <app-search-bar (keyEvent)="inputEventHandler($event)"></app-search-bar>
 </div>
 <div class="container">
     <div class="sidebar-container">
-        <app-sidebar></app-sidebar>
+        <app-sidebar (filterProduct)="filterProductHandler($event)"
+            (filterSpecialization)="filterSpecializationHandler($event)"></app-sidebar>
     </div>
     <div class="main-pane">
         <p class="main-pane-path">Partner Locator > <span class="path-title">Search Result(s)</span></p>
         <div class="top-part">
             <div>
-                <h4 class="result-count"> {{resultArray.length}} search Results</h4>
+                <h4> {{resultArray.length}} search Results</h4>
             </div>
             <div class="favorites-title">
                 <mat-slide-toggle (change)="toggleFav()">View Favourites</mat-slide-toggle>
-                <!-- <p>View Favourites</p> -->
+                <p class="clear-btn">Clear Filters</p>
             </div>
         </div>
         <div class="card-pane">
@@ -35,12 +36,17 @@
                     </mat-card-content>
                 </div>
                 <div class="card-footer">
-                    <button mat-button>Rating</button>
-                    <mat-icon *ngIf="!isBookmark" (click)="bookmark()">bookmark_border</mat-icon>
-                    <mat-icon *ngIf="isBookmark" (click)="bookmark()">bookmark</mat-icon>
+                    <star-rating [value]="item.rating" [totalstars]="5" checkedcolor="gold" uncheckedcolor="white"
+                        size="20px" (rate)="onRate($event)">
+                    </star-rating>
+                    <div *ngIf="item.isBookmarked; else bookmarkedTemplate">
+                        <mat-icon (click)="bookmark(item)">bookmark_border</mat-icon>
+                    </div>
+                    <ng-template #bookmarkedTemplate>
+                        <mat-icon (click)="bookmark(item)">bookmark</mat-icon>
+                    </ng-template>
                 </div>
             </mat-card>
-
         </div>
     </div>
 </div>
