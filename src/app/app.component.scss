@@ -122,8 +122,8 @@ mat-card-content {
     position: fixed;
     top: 0;
     left: 0;
-    height: 10vh;
-    z-index: 3;
+    height: auto;
+    z-index: 4;
     background-color: #f8f8f8;
 }
 
@@ -139,7 +139,7 @@ mat-card-content {
 
 @media screen and (max-width: 1280px) {
     .searchbar-container {
-        height: 11.4vh;
+        height: 12vh;
         overflow: hidden;
     }
 
@@ -230,6 +230,10 @@ mat-card-content {
 
     .mat-checkbox {
         font-size: 0.7rem !important;
+    }
+
+    .toggle-container, .checkbox-filters, .result-count {
+        font-size: 0.8rem;
     }
 }
 
