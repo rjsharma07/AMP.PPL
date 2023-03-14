@@ -2,18 +2,13 @@
     <div class="toggle-container">
         And <mat-slide-toggle></mat-slide-toggle>Or
     </div>
-    <div class="checkbox-filters">
-        <h3>Country/Region</h3>
-        <mat-select>
+    <div class="checkbox-filters m-t-10">
+        <mat-label>Country/Region</mat-label>
+        <mat-select placeholder="Select location" (selectionChange)="selection($event)">
             <mat-option *ngFor="let item of locationArray" [value]="item.locationId">
                 {{item.locationName}}
             </mat-option>
         </mat-select>
-        <!-- <select class="select-container">
-            <option *ngFor="let item of locationArray" [value]="item.locationId">
-                <div class="option-value">{{item.locationName}}</div>
-            </option>
-        </select> -->
     </div>
     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" [expanded]="true"
         class="checkbox-filters">

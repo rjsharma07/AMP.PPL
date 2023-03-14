@@ -25,9 +25,9 @@
 .checkbox-filters {
     padding: 0.5rem 0 0.5rem 1rem;
 
-    h3,
+    mat-label,
     mat-panel-title {
-        font-size: 1em;
+        font-size: 1rem;
         font-weight: bold;
         text-transform: uppercase;
     }
@@ -40,18 +40,24 @@
     }
 }
 
-mat-select,
-.select-container {
+mat-select {
     border: 1px solid #dee0e5;
     background-color: #fff;
     color: #000;
-    width: 80%;
-    height: 25px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
     border-radius: 3px;
+    margin: 0.75rem 0;
+    width: 90%;
 
     &:focus {
         outline: none;
     }
+}
+
+.mat-slide-toggle {
+    margin-right: 0.2rem;
 }
 
 @media screen and (max-width: 992px) {

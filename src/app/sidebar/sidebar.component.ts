@@ -52,4 +52,8 @@ export class SidebarComponent implements OnInit {
     this.filterOptionsSpecialization.push(item)
     this.filterSpecialization.emit(this.filterOptionsSpecialization)
   }
+
+  selection(event: any) {
+    console.log(event.value)
+  }
 }
