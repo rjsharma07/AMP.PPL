@@ -4,13 +4,14 @@
 }
 
 .toggle-container {
-    padding: 0.5rem 0 1rem 1rem;
+    padding: 1rem 0 1rem 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+
 .country-container {
     padding: 0.5rem 0 0.5rem 1rem;
-
+    
     h3 {
         font-size: 1em;
         font-weight: bold;
@@ -20,11 +21,18 @@
 
 .checkbox-filters {
     padding: 0.5rem 0 0.5rem 1rem;
-
+    
     h3 {
         font-size: 1em;
         font-weight: bold;
         text-transform: uppercase;
+    }
+    
+    @media screen and (max-width: 992px) {
+        h3 {
+            font-size: 0.9em;
+            margin: 0.5rem 0;
+        }
     }
 }
 
@@ -35,4 +43,20 @@ mat-select {
     width: 80%;
     height: 25px;
     border-radius: 3px;
+}
+
+@media screen and (max-width: 992px) {
+    .mat-checkbox {
+        font-size: 0.8rem !important;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .mat-checkbox {
+        font-size: 0.7rem !important;
+    }
+
+    .toggle-container {
+        padding: 0.5rem 1rem !important; 
+    }
 }

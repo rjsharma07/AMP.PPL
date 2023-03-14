@@ -38,7 +38,7 @@
 
             .example-card {
                 width: 18%;
-                margin: 0.75rem;
+                margin: 0.6rem;
                 overflow: hidden;
                 height: 100%;
 
@@ -51,12 +51,12 @@
                         font-size: 0.7rem;
                         border: 1px solid #007da8;
                         border-radius: 5px;
-                        padding: 4px 12px;
+                        padding: 4px 6px;
                     }
                 }
 
                 .logo {
-                    max-width: 200px;
+                    max-width: 100%;
                     max-height: 60px;
                 }
 
@@ -75,6 +75,7 @@
 
                 .card-url {
                     font-size: 0.7rem;
+                    word-wrap: break-word;
                 }
             }
         }
@@ -109,6 +110,7 @@ mat-card-content {
 
 .mat-card-content {
     margin-bottom: 0!important;
+    min-height: 30vh;
 }
 
 .card-img {
@@ -132,4 +134,112 @@ mat-card-content {
     left: 0;
     z-index: 3;
     height: 90vh;
+    background-color: #f8f8f8;
+}
+
+@media screen and (max-width: 1280px) {
+    .searchbar-container {
+        height: 11.4vh;
+        overflow: hidden;
+    }
+
+    .sidebar-container {
+        top: 11.4vh;
+    }
+
+    .example-card {
+        width: 22%!important;
+        margin: 0.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 992px) {
+
+    .container {
+        width: 75%;
+    }
+
+    .sidebar-container {
+        width: 25%;
+    }
+    
+    .example-card {
+        width: 45% !important;
+    }
+
+    .main-pane {
+        padding: 0.5rem;
+    }
+
+    .country-container {
+        h3 {
+            font-size: 0.9em;
+            margin: 0.5rem 0;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        width: 66%;
+    }
+
+    .sidebar-container {
+        width: 34%;
+    }
+    
+    .example-card {
+        width: 45% !important;
+        margin: 0.3rem !important;
+    }
+
+    mat-card-content {
+        padding: 0.7rem;
+    }
+
+    .card-img {
+        min-height: 40px;
+    }
+
+    .card-location {
+        margin-top: 1.5rem !important;
+    }
+
+    .tag-title {
+        font-size: 0.6rem !important;
+        padding: 4px 2px !important;
+    }
+}
+
+@media screen and (max-width: 560px) {
+
+    .container {
+        width: 65%;
+    }
+
+    .sidebar-container {
+        width: 35%;
+    }
+    
+    .example-card {
+        width: 100% !important;
+        margin: 0.75rem 0 !important;
+    }
+
+    .mat-checkbox {
+        font-size: 0.7rem !important;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 58%;
+    }
+
+    .sidebar-container {
+        width: 42%;
+    }
 }
