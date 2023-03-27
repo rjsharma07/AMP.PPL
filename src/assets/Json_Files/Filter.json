@@ -1,0 +1,123 @@
+{
+  "CategoryFilters": [
+    {
+      "CATEGORY_TYPE": "SPECIALIZATIONS",
+      "FILTERS": [
+        {
+          "Id": 1,
+          "Name": "Itsm",
+          "CreatedBy": 1,
+          "CreatedOn": "2023-03-24T04:38:54.234+00:00",
+          "UpdatedBy": 1,
+          "UpdatedOn": "2023-03-24T04:38:54.234+00:00"
+        },
+        {
+          "Id": 2,
+          "Name": "Cloud",
+          "CreatedBy": 1,
+          "CreatedOn": "2023-03-24T04:38:54.234+00:00",
+          "UpdatedBy": 1,
+          "UpdatedOn": "2023-03-24T04:38:54.234+00:00"
+        },
+        {
+          "Id": 3,
+          "Name": "Agile At Scale",
+          "CreatedBy": 1,
+          "CreatedOn": "2023-03-24T04:38:54.234+00:00",
+          "UpdatedBy": 1,
+          "UpdatedOn": "2023-03-24T04:38:54.234+00:00"
+        }
+      ]
+    },
+    {
+      "CATEGORY_TYPE": "PRODUCTS",
+      "FILTERS": [
+        {
+          "Id": 4,
+          "Name": "Bamboo",
+          "CreatedBy": 1,
+          "CreatedOn": "2023-03-24T04:38:54.234+00:00",
+          "UpdatedBy": 1,
+          "UpdatedOn": "2023-03-24T04:38:54.234+00:00"
+        },
+        {
+          "Id": 3,
+          "Name": "Fisheye",
+          "CreatedBy": 1,
+          "CreatedOn": "2023-03-24T04:38:54.234+00:00",
+          "UpdatedBy": 1,
+          "UpdatedOn": "2023-03-24T04:38:54.234+00:00"
+        },
+        {
+          "Id": 4,
+          "Name": "Jira Service Management",
+          "CreatedBy": 1,
+          "CreatedOn": "2023-03-24T04:38:54.234+00:00",
+          "UpdatedBy": 1,
+          "UpdatedOn": "2023-03-24T04:38:54.234+00:00"
+        },
+        {
+          "Id": 4,
+          "Name": "Bitbucket",
+          "CreatedBy": 1,
+          "CreatedOn": "2023-03-24T04:38:54.234+00:00",
+          "UpdatedBy": 1,
+          "UpdatedOn": "2023-03-24T04:38:54.234+00:00"
+        },
+        {
+          "Id": 4,
+          "Name": "Sourcetree",
+          "CreatedBy": 1,
+          "CreatedOn": "2023-03-24T04:38:54.234+00:00",
+          "UpdatedBy": 1,
+          "UpdatedOn": "2023-03-24T04:38:54.234+00:00"
+        },
+        {
+          "Id": 4,
+          "Name": "Trello",
+          "CreatedBy": 1,
+          "CreatedOn": "2023-03-24T04:38:54.234+00:00",
+          "UpdatedBy": 1,
+          "UpdatedOn": "2023-03-24T04:38:54.234+00:00"
+        }
+      ]
+    },
+    {
+      "CATEGORY_TYPE": "SPECIALIZATIONS",
+      "FILTERS": [
+        {
+          "Id": 4,
+          "Name": "Change Management",
+          "CreatedBy": 1,
+          "CreatedOn": "2023-03-24T04:38:54.234+00:00",
+          "UpdatedBy": 1,
+          "UpdatedOn": "2023-03-24T04:38:54.234+00:00"
+        },
+        {
+          "Id": 4,
+          "Name": "Custom Development",
+          "CreatedBy": 1,
+          "CreatedOn": "2023-03-24T04:38:54.234+00:00",
+          "UpdatedBy": 1,
+          "UpdatedOn": "2023-03-24T04:38:54.234+00:00"
+        },
+        {
+          "Id": 4,
+          "Name": "Installation",
+          "CreatedBy": 1,
+          "CreatedOn": "2023-03-24T04:38:54.234+00:00",
+          "UpdatedBy": 1,
+          "UpdatedOn": "2023-03-24T04:38:54.234+00:00"
+        },
+        {
+          "Id": 4,
+          "Name": "Managed Hosting",
+          "CreatedBy": 1,
+          "CreatedOn": "2023-03-24T04:38:54.234+00:00",
+          "UpdatedBy": 1,
+          "UpdatedOn": "2023-03-24T04:38:54.234+00:00"
+        }
+      ]
+    }
+  ]
+}

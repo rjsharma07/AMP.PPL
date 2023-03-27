@@ -3,36 +3,27 @@
         And <mat-slide-toggle></mat-slide-toggle>Or
     </div>
     <div class="checkbox-filters m-t-10">
-        <mat-label>Country/Region</mat-label>
-        <mat-select placeholder="Select location" (selectionChange)="selection($event)">
-            <mat-option *ngFor="let item of locationArray" [value]="item.locationId">
-                {{item.locationName}}
+        <mat-label>Country / Region</mat-label>
+        <mat-select placeholder="Select location" [(value)]="selected" (selectionChange)="filterOrganizationByCountry($event.value)">
+            <mat-option value="All">All</mat-option>
+            <mat-option *ngFor="let item of countries" [value]="item">
+                {{item}}
             </mat-option>
         </mat-select>
     </div>
     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" [expanded]="true"
-        class="checkbox-filters">
+        class="checkbox-filters" *ngFor="let item of filters">
         <mat-expansion-panel-header>
             <mat-panel-title>
-                Specializations
+                {{item.CATEGORY_TYPE}}
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <div *ngFor="let item of specializedArray" class="options">
-            <div><mat-checkbox class="example-margin"
-                    (click)="toggleSpecializtion(item.specializationName)">{{item.specializationName}}</mat-checkbox>
+        <div *ngFor="let filter of item.FILTERS" class="options">
+            <div>
+                <mat-checkbox class="example-margin" (change)="filterOrganization($event, filter.Name)">
+                    {{filter.Name}}
+                </mat-checkbox>
             </div>
-        </div>
-    </mat-expansion-panel>
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" [expanded]="true"
-        class="checkbox-filters">
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                Products
-            </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div *ngFor="let item of productsArray" class="options">
-            <div><mat-checkbox class="example-margin"
-                    (click)="toggleProducts(item.productName)">{{item.productName}}</mat-checkbox></div>
         </div>
     </mat-expansion-panel>
 </div>

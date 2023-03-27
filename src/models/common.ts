@@ -29,3 +29,8 @@ export interface Result {
     specialization: Array<any>,
     products: Array<any>
 }
+
+export interface AvailableFilters {
+    countryName: string,
+    appliedFilterIds: string[]
+}

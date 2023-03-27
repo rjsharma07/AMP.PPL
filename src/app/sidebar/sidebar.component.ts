@@ -1,6 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { DataService } from 'src/services/data.service';
-import { Location, Products, Specialization } from 'src/models/common';
+import { AvailableFilters, Location, Products, Specialization } from 'src/models/common'; 
 
 @Component({
   selector: 'app-sidebar',
@@ -9,51 +9,46 @@ import { Location, Products, Specialization } from 'src/models/common';
 })
 export class SidebarComponent implements OnInit {
 
-  @Output() filterSpecialization = new EventEmitter();
-  @Output() filterProduct = new EventEmitter();
+  @Input() countries: any[];
+  @Output() filter = new EventEmitter();
   locationArray: Location[] = [];
   specializedArray: Specialization[] = [];
   productsArray: Products[] = [];
   panelOpenState: boolean = true;
   filterOptionsSpecialization: any[] = [];
   filterOptionsProducts: any[] = [];
+  filters: any[];
+  selected = "All";
+  selectedFilters: string[];
+  availableFilters: AvailableFilters = {
+    countryName: "",
+    appliedFilterIds: []
+  }
 
   constructor(private service: DataService) { }
 
   ngOnInit(): void {
-    this.getLocations();
-    this.getSpecializedData();
-    this.getProducts();
+    this.getFilters();
   }
 
-  getLocations() {
-    this.service.location().subscribe((res) => {
-      this.locationArray = res
-    })
+  getFilters() {
+    this.service.getFilters().subscribe((res) => {
+      this.filters = res.CategoryFilters;
+    });
   }
 
-  getSpecializedData() {
-    this.service.special().subscribe((res) => {
-      this.specializedArray = res
-    })
-  }
-  getProducts() {
-    this.service.product().subscribe((res) => {
-      this.productsArray = res
-    })
+  selection(event: any) {}
+
+  toggleSpecialization(filter: any) {}
+
+  filterOrganization(event: any, filter: string) {
+    event.checked ? this.availableFilters.appliedFilterIds.push(filter) : 
+      this.availableFilters.appliedFilterIds.splice(this.availableFilters.appliedFilterIds.indexOf(filter), 1);
+    this.filter.emit(this.availableFilters);
   }
 
-  toggleProducts(item: any) {
-    this.filterOptionsProducts.push(item)
-    this.filterProduct.emit(this.filterOptionsProducts)
-  }
-
-  toggleSpecializtion(item: any) {
-    this.filterOptionsSpecialization.push(item)
-    this.filterSpecialization.emit(this.filterOptionsSpecialization)
-  }
-
-  selection(event: any) {
-    console.log(event.value)
+  filterOrganizationByCountry(event: string) {
+    this.availableFilters.countryName = event;
+    this.filter.emit(this.availableFilters);
   }
 }

@@ -1,10 +1,14 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 html,
-body {
+body, mat-card {
     margin: 0;
     height: 100%;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body, mat-card, h1, h2, h3, h4, h5, h6, div, p, mat-checkbox, mat-slide-toggle, input, .mat-tooltip {
+    font-family: "IBM Plex Sans", Roboto, "Open Sans", Arial, Helvetica, Sans-Serif !important;
+    color: #333;
 }
 
 .m-t-10 {
@@ -20,7 +24,8 @@ mat-card {
 }
 
 .mat-card-header-text {
-    margin: 7px 0 7px 4px !important;
+
+    margin: 0 !important;
 
     .mat-card-title {
         margin-bottom: 0 !important;
@@ -28,8 +33,7 @@ mat-card {
 }
 
 .mat-card-header {
-    display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
 }
 
 .mat-card-avatar {
@@ -48,6 +52,11 @@ mat-card {
 
 .mat-expansion-panel-header {
     padding-left: 0 !important;
+    margin-bottom: 0.5rem;
+
+    &:hover {
+        background-color: none;
+    }
 }
 
 .mat-expansion-panel-body {
@@ -68,6 +77,14 @@ mat-card {
 }
 
 .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
-    background-color: #D61355;
+    background-color: #23c9ff;
 }
 
+.mat-expansion-indicator::after {
+    color: #333 !important;
+}
+
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, 
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: #23c9ff;
+}

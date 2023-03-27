@@ -1,0 +1,136 @@
+{
+    "Organization": [
+      {
+        "ID": "1",
+        "OrganizationName": "Praecipio",
+        "AboutUs": "Praecipio is a cloud-first business and technology consulting firm specializing in strategic Cloud transformations, Enterprise Agility, DevOps, Application Development and Modern Service Management. Praecipio is an enterprise-level strategic advisor across the Atlassian platform focused on helping businesses drive revenue and fuel growth.",
+        "Currency": "USD",
+        "Thumbnail": "https://demo.mindmatrix.net/timg400/co0jxic8k2pdq/thumb_400-5dbc1b47-bfa8-9489-a301-16101ccc3bf7.png",
+        "WebsiteUrl": "https://www.praecipio.com/solutions/atlassian",
+        "CreatedBy": "Nice",
+        "CreatedOn": "2023-03-24T04:38:54.234+00:00",
+        "UpdatedOn": "2023-03-24T04:38:54.234+00:00",
+        "Address": {
+          "Address1": "4925",
+          "Address2": "Rosemont",
+          "Address3": "Avenue",
+          "City": "Austin",
+          "State": "Texas",
+          "Country": "US",
+          "Zipcode": "92618"
+        },
+        "Contact": {
+          "Fax": "",
+          "Email": "support@praecipio.com",
+          "Telephone": "9590990998"
+        },
+        "SocialMedia": {
+          "Linkedin": "",
+          "Facebook": "",
+          "Twitter": ""
+        },
+        "UserRatingAndFavouriteCount": 3,
+        "UserRatingAndFavourite": [
+          {
+            "UserId": "10",
+            "Rating": 3,
+            "Favourite": true
+          },
+          {
+            "UserId": "11",
+            "Rating": 4,
+            "Favourite": false
+          },
+          {
+            "UserId": "12",
+            "Rating": null,
+            "Favourite": true
+          }
+        ],
+        "Supplier": {
+          "IsSupplier": "true",
+          "SupplierType": "Preferred Supplier"
+        },
+        "PartnershipCount": 2,
+        "Partnership": [{
+                "CompanyId": "16",
+                "PartnerType": "Bronze Partner",
+                "PartnerLevel": "2"
+            },
+            {
+                "CompanyId": "18",
+                "PartnerType": "Bronze Partner",
+                "PartnerLevel": "2"
+        }],
+        "Category": [{
+          "SPECIALIZATIONS": ["Itsm","Cloud"],
+          "PRODUCTS": ["Bamboo","Fisheye","Jira Service Management"],
+          "SERVICES": ["Installation","Managed Hosting"]
+        }]
+      },
+      {
+        "ID": "2",
+        "OrganizationName": "Blended Perspectives",
+        "AboutUs": "Strategy Implementation,Training & Hosting; Cloud, Server and Data Center expertise. JIRA: configuration, integration, process definition, Agile/ project/ portfolio management. Service Desk and ITIL consulting. Confluence: designed and implemented intranets, wikis and workflows since 2001. Extensive add on expertise.",
+        "Currency": "USD",
+        "Thumbnail": "https://demo.mindmatrix.net/timg400/t4rudaao96de/thumb_400-image_25.png",
+        "WebsiteUrl": "https://www.blendedperspectives.com/",
+        "CreatedBy": "Nice",
+        "CreatedOn": "2023-03-24T04:38:54.234+00:00",
+        "UpdatedOn": "2023-03-24T04:38:54.234+00:00",
+        "Address": {
+          "Address1": "1781  Road",
+          "Address2": "Gateway",
+          "Address3": "Road",
+          "City": "Ontario",
+          "State": "Toronto",
+          "Country": "Canada",
+          "Zipcode": "97230"
+        },
+        "Contact": {
+          "Fax": "",
+          "Email": "hello@blendedperspectives.com",
+          "Telephone": "(416)273-6883"
+        },
+        "SocialMedia": {
+          "Linkedin": "",
+          "Facebook": "",
+          "Twitter": ""
+        },
+        "UserRatingAndFavouriteCount": 2,
+        "UserRatingAndFavourite": [
+          {
+            "UserId": "10",
+            "Rating": 3,
+            "Favourite": true
+          },
+          {
+            "UserId": "11",
+            "Rating": 4,
+            "Favourite": false
+          }
+        ],
+        "Supplier": {
+          "IsSupplier": "true",
+          "SupplierType": "Preferred Supplier"
+        },
+        "PartnershipCount": 2,
+        "Partnership": [{
+                "CompanyId": "12",
+                "PartnerType": "Bronze Partner",
+                "PartnerLevel": "2"
+            },
+            {
+                "CompanyId": "14",
+                "PartnerType": "Bronze Partner",
+                "PartnerLevel": "2"
+        }],
+        "Category": [{
+          "SPECIALIZATIONS": ["Agile At Scale"],
+          "PRODUCTS": ["Bitbucket","Sourcetree","Trello"],
+          "SERVICES": ["Change Management","Custom Development"]
+        }]
+      }
+    ]
+}
+
