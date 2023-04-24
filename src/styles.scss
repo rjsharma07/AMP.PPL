@@ -1,12 +1,26 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 html,
-body, mat-card {
+body,
+mat-card {
     margin: 0;
     height: 100%;
 }
 
-body, mat-card, h1, h2, h3, h4, h5, h6, div, p, mat-checkbox, mat-slide-toggle, input, .mat-tooltip {
+body,
+mat-card,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p,
+mat-checkbox,
+mat-slide-toggle,
+input,
+.mat-tooltip {
     font-family: "IBM Plex Sans", Roboto, "Open Sans", Arial, Helvetica, Sans-Serif !important;
     color: #333;
 }
@@ -46,7 +60,7 @@ mat-card {
     overflow: hidden !important;
 }
 
-.mat-expansion-panel{
+.mat-expansion-panel {
     background: none !important;
 }
 
@@ -84,7 +98,16 @@ mat-card {
     color: #333 !important;
 }
 
-.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, 
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
 .mat-checkbox-checked.mat-accent .mat-checkbox-background {
     background-color: #23c9ff;
 }
+
+.mat-ink-bar {
+    background-color: #23c9ff !important;
+    border-color: #23c9ff !important;
+}
+
+// .mat-tab-label-content {
+//     color: #23c9ff !important;
+// }

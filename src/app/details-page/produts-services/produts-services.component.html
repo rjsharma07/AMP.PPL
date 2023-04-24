@@ -1,0 +1,14 @@
+<div class="product-service-container">
+    <div class="product-container">
+        <div class="product-title">Products</div>
+        <div *ngFor="let item of organizations.Category[0].PRODUCTS">
+            <div class="product-data">{{item}}</div>
+        </div>
+    </div>
+    <div class="service-container">
+        <div class="service-title">All Services</div>
+        <div *ngFor="let item of organizations.Category[0].SERVICES">
+            <div class="service-data">{{item}}</div>
+        </div>
+    </div>
+</div>

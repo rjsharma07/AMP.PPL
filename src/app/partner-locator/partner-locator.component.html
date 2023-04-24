@@ -1,0 +1,60 @@
+<div class="header">
+    <div class="header-text">Whether it’s an everyday challenge or an enterprise solution, Atlassian partners
+        are certified to solve challenges of any scale. Begin by searching below.</div>
+</div>
+<div class="searchbar-container">
+    <app-search-bar (keyEvent)="inputEventHandler($event)"></app-search-bar>
+</div>
+<div class="container">
+    <div class="sidebar-container">
+        <app-sidebar (filter)="filterOrganizationHandler($event)" [countries]="countries"></app-sidebar>
+    </div>
+    <div class="main-pane">
+        <p class="main-pane-path">Partner Locator > <span class="path-title">Search Result(s)</span></p>
+        <div class="top-part">
+            <div>
+                <h4> {{organizations.length}} Search results</h4>
+            </div>
+            <div class="favorites-title">
+                <mat-slide-toggle (change)="toggleFav()">View Favourites</mat-slide-toggle>
+            </div>
+        </div>
+        <div class="card-pane">
+            <mat-card class="example-card" *ngFor="let item of organizations">
+                <div class="card-content">
+                    <div class="card-tag-box">
+                        <mat-card-header class="org-header" *ngIf="item.Supplier">
+                            <div class="org-types">
+                                <div class="tag-title bg-light">{{item.Supplier.SupplierType}}</div>
+                                <div class="tag-title bg-dark">{{item.Partnership[0].PartnerType}}</div>
+                            </div>
+                            <div class="card-img"><img src={{item.Thumbnail}} class="logo" /></div>
+                            <div class="overlay">
+                                <button class="view-btn" matTooltip="Preview" matTooltipPosition="above" (click)="navigateToDetails(item.ID)">View</button>
+                            </div>
+                        </mat-card-header>
+                    </div>
+                    <mat-card-content>
+                        <div class="card-text card-title">{{item.OrganizationName}}</div>
+                        <div class="card-text card-description">{{item.AboutUs}}</div>
+                        <div class="card-text card-location">{{item.Address.State + ', ' + item.Address.Country}}</div>
+                        <div class="card-text card-url"><a href="{{item.WebsiteUrl}}">{{item.WebsiteUrl}}</a></div>
+                    </mat-card-content>
+                </div>
+                <div *ngFor="let user of item.UserRatingAndFavourite">
+                    <div class="card-footer" *ngIf="user.UserId == 11">
+                        <star-rating [value]="user.Rating" [totalstars]="5" checkedcolor="gold" uncheckedcolor="white"
+                            size="20px">
+                        </star-rating>
+                        <div *ngIf="user.Favourite; else bookmarkedTemplate">
+                            <mat-icon>bookmark_border</mat-icon>
+                        </div>
+                        <ng-template #bookmarkedTemplate>
+                            <mat-icon>bookmark</mat-icon>
+                        </ng-template>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

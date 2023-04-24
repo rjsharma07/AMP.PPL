@@ -1,0 +1,63 @@
+<div class="details-container">
+    <div class="top-pane">
+        <div class="product-details">
+            <div class="logo-pane">
+                <div class="company-logo">
+                    <img src={{organizations.Thumbnail}} />
+                </div>
+            </div>
+        </div>
+        <div class="details-header">
+            <div class="org-title">{{organizations.OrganizationName}}</div>
+            <div *ngFor="let user of organizations.UserRatingAndFavourite">
+                <div class="rating-pane" *ngIf="user.UserId == 11">
+                    <star-rating [value]="user.Rating" [totalstars]="5" checkedcolor="gold" uncheckedcolor="white"
+                        size="20px">
+                    </star-rating>
+                    <div *ngIf="user.Favourite; else bookmarkedTemplate">
+                        <mat-icon>bookmark_border</mat-icon>
+                    </div>
+                    <ng-template #bookmarkedTemplate>
+                        <mat-icon>bookmark</mat-icon>
+                    </ng-template>
+                </div>
+            </div>
+            <div class="location-text">{{organizations.Address.State + ', ' + organizations.Address.Country}}</div>
+            <div class="contact-text">Phone: {{organizations.Contact.Telephone}}</div>
+            <div class="support-text">{{organizations.Contact.Email}}</div>
+            <div class="company-url">{{organizations.WebsiteUrl}}</div>
+        </div>
+        <div class="supplier-details">
+            <div *ngIf="organizations.Supplier.IsSupplier">
+                <div class="supplier-label">Supplier Type</div>
+                <div class="tag-title bg-light">{{organizations.Supplier.SupplierType}}</div>
+            </div>
+            <div *ngIf="organizations.Partnership[0]" class="partner-pane">
+                <div class="supplier-label">Partner Level</div>
+                <div class="tag-title bg-dark" matTooltip="{{organizations.Partnership[0].PartnerType}}"
+                    matTooltipPosition="above">{{organizations.Partnership[0].PartnerType}}</div>
+            </div>
+        </div>
+        <div class="req-btn-pane">
+            <div class="req-btn" matTooltip="Request Information" matTooltipPosition="above">Request Information</div>
+        </div>
+    </div>
+    <div class="tabs-pane">
+        <mat-tab-group>
+            <mat-tab label="About">
+                <app-about [organizations]="organizations"></app-about>
+            </mat-tab>
+            <mat-tab label="Resources">
+                <app-resources [organizations]="organizations"></app-resources>
+            </mat-tab>
+            <mat-tab label="Products and Services">
+                <app-produts-services [organizations]="organizations"></app-produts-services>
+            </mat-tab>
+            <mat-tab label="Company Info">
+                <app-company-info [organizations]="organizations"></app-company-info>
+            </mat-tab>
+            <mat-tab label="Location"><app-location [organizations]="organizations"></app-location> </mat-tab>
+            <mat-tab label="Products"><app-products [organizations]="organizations"></app-products> </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

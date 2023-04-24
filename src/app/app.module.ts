@@ -18,12 +18,29 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { RatingModule } from 'ng-starrating';
+import { DetailsPageComponent } from './details-page/details-page.component';
+import { PartnerLocatorComponent } from './partner-locator/partner-locator.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { AboutComponent } from './details-page/about/about.component';
+import { ProductsComponent } from './details-page/products/products.component';
+import { ProdutsServicesComponent } from './details-page/produts-services/produts-services.component';
+import { ResourcesComponent } from './details-page/resources/resources.component';
+import { CompanyInfoComponent } from './details-page/company-info/company-info.component';
+import { LocationComponent } from './details-page/location/location.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
-    SidebarComponent
+    SidebarComponent,
+    DetailsPageComponent,
+    PartnerLocatorComponent,
+    AboutComponent,
+    ProductsComponent,
+    ProdutsServicesComponent,
+    ResourcesComponent,
+    CompanyInfoComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +57,8 @@ import { RatingModule } from 'ng-starrating';
     MatIconModule,
     MatSelectModule,
     MatTooltipModule,
-    RatingModule
+    RatingModule,
+    MatTabsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

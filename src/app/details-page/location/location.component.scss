@@ -1,0 +1,30 @@
+.location-container {
+    .location-subcontainer {
+        padding-top: 30px;
+        padding-left: 16px;
+
+        .location-title {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 26px;
+            color: #2F3542;
+        }
+
+        .location-pane {
+            padding: 16px 0;
+            padding-bottom: 48px;
+            border-bottom: 1px solid #D9DCE1;
+
+            .location-card {
+                font-family: IBM Plex Sans;
+                font-size: 15px;
+                line-height: 24px;
+                color: rgba(47, 53, 66, 1);
+                font-weight: 400;
+                padding: 20px;
+                border: 1px solid rgba(221, 221, 221, 1);
+                max-width: 240px;
+            }
+        }
+    }
+}

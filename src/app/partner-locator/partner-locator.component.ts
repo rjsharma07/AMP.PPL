@@ -5,11 +5,11 @@ import { StarRatingComponent } from 'ng-starrating';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-partner-locator',
+  templateUrl: './partner-locator.component.html',
+  styleUrls: ['./partner-locator.component.scss']
 })
-export class AppComponent implements OnInit {
+export class PartnerLocatorComponent implements OnInit {
   searchKeyword: string = '';
   title = 'AMP.PPL';
   count: number = 0;
