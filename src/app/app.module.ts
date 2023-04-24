@@ -18,12 +18,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { RatingModule } from 'ng-starrating';
+import { CustomFormsComponent } from './custom-forms/custom-forms.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
-    SidebarComponent
+    SidebarComponent,
+    CustomFormsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
