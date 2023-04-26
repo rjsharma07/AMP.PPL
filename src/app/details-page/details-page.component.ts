@@ -11,12 +11,15 @@ export class DetailsPageComponent implements OnInit {
   viewFav: boolean = false;
   favoriteArray: any[] = [];
   isBookmark: boolean = false;
+  availableFormData: any;
+  public selectedTabIndex = 0;
+  public formData:any = [];
 
   constructor(private service: DataService) { }
 
   ngOnInit(): void {
     this.getOrganizationById();
-
+    this.getForms();
   }
 
   getOrganizationById() {
@@ -33,4 +36,14 @@ export class DetailsPageComponent implements OnInit {
   bookmark(event: any) {
     event.isBookmarked = !event.isBookmarked;
   }
+
+  getForms() {
+    this.service.getForms().subscribe((res) => {
+      this.availableFormData = res;
+    })
+  }
+
+  // public tabChanged(event: MatTabChangeEvent) {
+  //   this.selectedTabIndex = event.index;
+  // }
 }

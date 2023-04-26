@@ -47,7 +47,18 @@
             <mat-tab label="About">
                 <app-about [organizations]="organizations"></app-about>
             </mat-tab>
-            <mat-tab label="Resources">
+            <mat-tab *ngFor="let tab of availableFormData" label="{{tab.TabName}}">
+                <div class="tab-content">
+                    <div class="form-subcontainer">
+                        <div class="input-pane">
+                            <div *ngFor="let item of tab.Fields" class="input-field">
+                                <input type="{{item.FieldType}}" [value]="item.DisplayName +':  '+ item.DefaultValue " class="input-box" />
+                            </div>
+                        </div>
+                        </div>
+                </div>
+            </mat-tab>
+            <!-- <mat-tab label="Resources">
                 <app-resources [organizations]="organizations"></app-resources>
             </mat-tab>
             <mat-tab label="Products and Services">
@@ -57,7 +68,7 @@
                 <app-company-info [organizations]="organizations"></app-company-info>
             </mat-tab>
             <mat-tab label="Location"><app-location [organizations]="organizations"></app-location> </mat-tab>
-            <mat-tab label="Products"><app-products [organizations]="organizations"></app-products> </mat-tab>
+            <mat-tab label="Products"><app-products [organizations]="organizations"></app-products> </mat-tab> -->
         </mat-tab-group>
     </div>
 </div>
