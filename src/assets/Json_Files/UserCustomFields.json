@@ -1,0 +1,311 @@
+[
+  {
+    "Id": "0c3346f1-6d45-4e1d-9dc2-7c0b4f4c4d3b",
+    "TabIndex": 1,
+    "TabName": "Basic Information",
+    "ToolTipSetting": {
+      "ShowToolTip": true,
+      "ToolTipText": "This is a tooltip.",
+      "ToolTipIcon": true
+    },
+    "Localization": {
+      "en-US": "Basic Information",
+      "fr-FR": "Informations de base"
+    },
+    "Fields": [
+      {
+        "Id": "5e18d5dc-68cc-45a5-8f3b-51f3c1e68e7b",
+        "FieldSequence": 1,
+        "ParserName": "firstName",
+        "DisplayName": "First Name",
+        "FieldType": "text",
+        "DefaultValue": "",
+        "Required": true,
+        "CharMin": 1,
+        "CharMax": 50,
+        "CreatedOn": "2023-04-24T00:00:00Z",
+        "UpdatedOn": "2023-04-24T00:00:00Z",
+        "IsFieldGroup": false,
+        "GroupParserName": "",
+        "ToolTipSetting": {
+          "ShowToolTip": true,
+          "ToolTipText": "Enter your first name here.",
+          "ToolTipIcon": false
+        },
+        "Localization": {
+          "en-US": "First Name",
+          "fr-FR": "Prénom"
+        }
+      },
+      {
+        "Id": "a1e54f9d-6d04-4bb5-bf61-7d82c2a2a7a4",
+        "FieldSequence": 2,
+        "ParserName": "lastName",
+        "DisplayName": "Last Name",
+        "FieldType": "text",
+        "DefaultValue": "",
+        "Required": true,
+        "CharMin": 1,
+        "CharMax": 50,
+        "CreatedOn": "2023-04-24T00:00:00Z",
+        "UpdatedOn": "2023-04-24T00:00:00Z",
+        "IsFieldGroup": false,
+        "GroupParserName": "",
+        "ToolTipSetting": {
+          "ShowToolTip": true,
+          "ToolTipText": "Enter your last name here.",
+          "ToolTipIcon": false
+        },
+        "Localization": {
+          "en-US": "Last Name",
+          "fr-FR": "Nom de famille"
+        }
+      },
+      {
+        "Id": "a1e54f9d-6d04-4bb5-bf61-7d82c2a2a7b7",
+        "FieldSequence": 3,
+        "ParserName": "Group1Parser",
+        "DisplayName": "Group1",
+        "FieldType": "",
+        "DefaultValue": "",
+        "Required": false,
+        "CharMin": null,
+        "CharMax": null,
+        "CreatedOn": "2023-04-24T00:00:00Z",
+        "UpdatedOn": "2023-04-24T00:00:00Z",
+        "IsFieldGroup": true,
+        "GroupParserName": "",
+        "ToolTipSetting": {
+          "ShowToolTip": true,
+          "ToolTipText": "This is Group 1",
+          "ToolTipIcon": false
+        },
+        "Localization": {
+          "en-US": "Group1"
+        }
+      },
+      {
+        "Id": "a1e54f9d-6d04-4bb5-bf61-7d82c2a2a7b4",
+        "FieldSequence": 4,
+        "ParserName": "Group1Field1Parser",
+        "DisplayName": "Group1 Field1",
+        "FieldType": "text",
+        "DefaultValue": "",
+        "Required": false,
+        "CharMin": 0,
+        "CharMax": 150,
+        "CreatedOn": "2023-04-24T00:00:00Z",
+        "UpdatedOn": "2023-04-24T00:00:00Z",
+        "IsFieldGroup": false,
+        "GroupParserName": "Group1Parser",
+        "ToolTipSetting": {
+          "ShowToolTip": true,
+          "ToolTipText": "This is Group1 Field1",
+          "ToolTipIcon": false
+        },
+        "Localization": {
+          "en-US": "Group1Field1"
+        }
+      },
+      {
+        "Id": "a1e54f9d-6d04-4bb5-bf61-7d82c2a2a7b1",
+        "FieldSequence": 5,
+        "ParserName": "Group2Parser",
+        "DisplayName": "Group2",
+        "FieldType": "",
+        "DefaultValue": "",
+        "Required": false,
+        "CharMin": null,
+        "CharMax": null,
+        "CreatedOn": "2023-04-24T00:00:00Z",
+        "UpdatedOn": "2023-04-24T00:00:00Z",
+        "IsFieldGroup": true,
+        "GroupParserName": "Group1Parser",
+        "ToolTipSetting": {
+          "ShowToolTip": true,
+          "ToolTipText": "This is Group 2",
+          "ToolTipIcon": false
+        },
+        "Localization": {
+          "en-US": "Group2"
+        }
+      },
+      {
+        "Id": "a1e54f9d-6d04-4bb5-bf61-7d82c2a2a7b2",
+        "FieldSequence": 6,
+        "ParserName": "Group3",
+        "DisplayName": "Group3 Parser",
+        "FieldType": "",
+        "DefaultValue": "",
+        "Required": false,
+        "CharMin": null,
+        "CharMax": null,
+        "CreatedOn": "2023-04-24T00:00:00Z",
+        "UpdatedOn": "2023-04-24T00:00:00Z",
+        "IsFieldGroup": true,
+        "GroupParserName": "Group2Parser",
+        "ToolTipSetting": {
+          "ShowToolTip": true,
+          "ToolTipText": "This is Group 3",
+          "ToolTipIcon": false
+        },
+        "Localization": {
+          "en-US": "Group3"
+        }
+      },
+      {
+        "Id": "a1e54f9d-6d04-4bb5-bf61-7d82c2a2a7b3",
+        "FieldSequence": 7,
+        "ParserName": "Group3Field1Parser",
+        "DisplayName": "Group3 Field1",
+        "FieldType": "text",
+        "DefaultValue": "",
+        "Required": false,
+        "CharMin": 0,
+        "CharMax": 150,
+        "CreatedOn": "2023-04-24T00:00:00Z",
+        "UpdatedOn": "2023-04-24T00:00:00Z",
+        "IsFieldGroup": false,
+        "GroupParserName": "Group2Parser",
+        "ToolTipSetting": {
+          "ShowToolTip": true,
+          "ToolTipText": "This is Group3 Field1",
+          "ToolTipIcon": false
+        },
+        "Localization": {
+          "en-US": "Group3Field1"
+        }
+      },
+      {
+        "Id": "a1e54f9d-6d04-4bb5-bf61-7d82c2a2a7d4",
+        "FieldSequence": 8,
+        "ParserName": "Textarea1",
+        "DisplayName": "Textarea1",
+        "FieldType": "Textarea",
+        "DefaultValue": "",
+        "Required": true,
+        "CharMin": 1,
+        "CharMax": 300,
+        "CreatedOn": "2023-04-24T00:00:00Z",
+        "UpdatedOn": "2023-04-24T00:00:00Z",
+        "IsFieldGroup": false,
+        "GroupParserName": "",
+        "ToolTipSetting": {
+          "ShowToolTip": true,
+          "ToolTipText": "Enter values to Textarea",
+          "ToolTipIcon": false
+        },
+        "Localization": {
+          "en-US": "Textarea1"
+        }
+      }
+    ],
+    "Links": [
+      {
+        "CompanyId": "f2e8d382-fd14-428a-9bb3-3f44b0e74e25",
+        "CompanyName": "Acme Inc.",
+        "OverRidenFields": [
+          {
+            "FieldId": "5e18d5dc-68cc-45a5-8f3b-51f3c1e68e7b",
+            "ParserName": "firstName",
+            "DisplayName": "First Name",
+            "Required": false
+          },
+          {
+            "FieldId": "a1e54f9d-6d04-4bb5-bf61-7d82c2a2a7c4",
+            "ParserName": "lastName",
+            "DisplayName": "Surname",
+            "Required": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": "9f4fdd63-b2d7-4b20-b4f7-1a40a5e7a1d5",
+    "TabIndex": 2,
+    "TabName": "Contact Information",
+    "ToolTipSetting": {
+      "ShowToolTip": true,
+      "ToolTipText": "Enter your contact information here.",
+      "ToolTipIcon": true
+    },
+    "Localization": {
+      "en": "Contact Information",
+      "fr": "Informations de contact",
+      "es": "Información de contacto"
+    },
+    "Fields": [
+      {
+        "Id": "5286e47e-3b44-463f-b78c-50e9907d271c",
+        "FieldSequence": 1,
+        "ParserName": "First Name",
+        "DisplayName": "First Name",
+        "FieldType": "Text",
+        "DefaultValue": "",
+        "Required": true,
+        "CharMin": 1,
+        "CharMax": 50,
+        "CreatedOn": "2022-04-01T12:00:00Z",
+        "UpdatedOn": "2022-04-01T12:00:00Z",
+        "IsFieldGroup": false,
+        "GroupParserName": "",
+        "ToolTipSetting": {
+          "ShowToolTip": true,
+          "ToolTipText": "Enter your first name here.",
+          "ToolTipIcon": true
+        },
+        "Localization": {
+          "en": "First Name",
+          "fr": "Prénom",
+          "es": "Nombre"
+        }
+      },
+      {
+        "Id": "b19fd7d6-2e21-4f6f-9e88-7266c3e87f3a",
+        "FieldSequence": 2,
+        "ParserName": "Last Name",
+        "DisplayName": "Last Name",
+        "FieldType": "Text",
+        "DefaultValue": "",
+        "Required": true,
+        "CharMin": 1,
+        "CharMax": 50,
+        "CreatedOn": "2022-04-01T12:00:00Z",
+        "UpdatedOn": "2022-04-01T12:00:00Z",
+        "IsFieldGroup": false,
+        "GroupParserName": "",
+        "ToolTipSetting": {
+          "ShowToolTip": true,
+          "ToolTipText": "Enter your last name here.",
+          "ToolTipIcon": true
+        },
+        "Localization": {
+          "en": "Last Name",
+          "fr": "Nom de famille",
+          "es": "Apellido"
+        }
+      }
+    ],
+    "Links": [
+      {
+        "CompanyId": "08e37e7a-0e21-4f5e-b1a2-7c4b4e83d7ad",
+        "CompanyName": "ABC Inc.",
+        "OverRidenFields": [
+          {
+            "FieldId": "5286e47e-3b44-463f-b78c-50e9907d271c",
+            "ParserName": "First Name",
+            "DisplayName": "Employee First Name",
+            "Required": false
+          },
+          {
+            "FieldId": "b19fd7d6-2e21-4f6f-9e88-7266c3e87f3a",
+            "ParserName": "Last Name",
+            "DisplayName": "Employee Last Name",
+            "Required": false
+          }
+        ]
+      }
+    ]
+  }
+]

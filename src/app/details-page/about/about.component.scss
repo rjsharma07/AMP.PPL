@@ -3,4 +3,93 @@
     border-bottom: 1px solid #D9DCE1;
     font-size: 14px;
     color: black;
+
+    .forms-container {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+
+        .add-tab-button,
+        .delete-tab-button {
+            margin: 16px;
+            padding: 8px;
+        }
+
+        .tab-content {
+            padding: 16px;
+
+            .form-subcontainer {
+                border: 1px solid #D9DCE1;
+                border-radius: 5px;
+                margin-top: 12px;
+                padding: 6px 8px;
+
+                .input-pane {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .input-field {
+                        padding: 16px 10px;
+                        width: calc(50% - 20px);
+
+                        .input-box {
+                            width: 100%;
+                            min-height: 30px;
+                            border-radius: 4px;
+                            border: 1px #c8c8c8 !important;
+                            padding-left: 6px;
+                        }
+                    }
+                }
+
+                .form-content-box {
+                    border: 1px solid #D9DCE1;
+                    margin-top: 12px;
+                    background-color: #fff !important;
+                    border-radius: 5px;
+
+                    .form-content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding: 6px;
+
+                        .input-box {
+                            margin: 6px;
+                        }
+                    }
+
+                    .add-field-btn {
+                        display: flex;
+                        justify-content: flex-end;
+                        padding: 6px;
+
+                        .field-btn {
+                            margin-right: 12px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.modal-group {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 1px;
+    box-shadow: 4px 4px 4px rgb(0 0 0/25%);
+    box-sizing: border-box;
+    min-height: 120px;
+    padding: 16px 24px;
+    position: absolute;
+    width: 300px;
+    min-width: 240px;
+    z-index: 4;
+}
+
+.mat-expansion-panel-header {
+    margin-bottom: 0 !important;
+    padding-left: 12px !important;
+    padding-top: 6px !important;
 }

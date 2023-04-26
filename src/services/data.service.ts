@@ -7,7 +7,7 @@ export class DataService {
     //Add base URL here
     baseUrl: string = "";
 
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) { }
 
     getFilters(): Observable<any> {
         //Add action URL with base URL
@@ -20,5 +20,9 @@ export class DataService {
         // const url = this.baseUrl + "";
         // return this.http.post(url, payload);
         return this.http.get("../assets/Json_Files/Org.json");
+    }
+
+    getForms(): Observable<any> {
+        return this.http.get("../assets/Json_Files/UserCustomFields.json");
     }
 }
