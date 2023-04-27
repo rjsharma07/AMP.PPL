@@ -3,6 +3,7 @@ import { DataService } from 'src/services/data.service';
 import { Result } from 'src/models/common';
 import { StarRatingComponent } from 'ng-starrating';
 import { Router } from '@angular/router';
+import { Organization } from 'src/models/Organization';
 
 @Component({
   selector: 'app-partner-locator',
@@ -17,11 +18,14 @@ export class PartnerLocatorComponent implements OnInit {
   viewFav: boolean = false;
   favoriteArray: any[] = [];
   isBookmark: boolean = false;
+  isFavourite: boolean = false;
   filteredArray: Result[] = [];
-  organizations: any[] = [];
+  organizations: Organization[];
   bookmarksAndRatings: any[] = [];
   countries: any[] = [];
-  availableFilters: any;
+  availableFilters: any = {};
+  userrating: any[];
+  itemisfavourite: boolean;
 
   constructor(private service: DataService, private router: Router) { }
 
@@ -31,12 +35,22 @@ export class PartnerLocatorComponent implements OnInit {
 
   getOrganizations() {
     this.service.getOrganizations(this.availableFilters).subscribe((res) => {
-      this.organizations = res.Organization;
-      res.Organization.map((org: any) => {
-        if (!this.countries.some(country => country === org.Address.Country)) {
-          this.countries.push(org.Address.Country);
-        }
-      })
+      // if (res.error == null) {
+      //   let response: any = res.response;
+        res.map((org: Organization) => {
+          if (!this.countries.some(country => country === org.address.country)) {
+            this.countries.push(org.address.country);
+          }
+          let totalrating = 0;
+          org.userRatingAndFavourite.some(x => {
+            totalrating += x.rating;
+          })
+          let avgrating = totalrating / org.userRatingAndFavouriteCount
+          org.avgrating = avgrating;
+        });
+        
+        this.organizations = res;
+      // }
     })
   }
 
@@ -58,15 +72,15 @@ export class PartnerLocatorComponent implements OnInit {
 
   toggleFav() {
     this.viewFav = !this.viewFav;
-    this.availableFilters.isBookMark = this.viewFav;
+    this.availableFilters.isFavourite = this.viewFav;
     this.getOrganizations();
   }
 
   bookmark(event: any) {
-    event.isBookmarked = !event.isBookmarked;
+    event.userRatingAndFavourite.filter((item: { userId: string, favourite: boolean }) => item.userId === '11').forEach((item: { favourite: any; }) => {item.favourite = !item.favourite; this.itemisfavourite = item.favourite});
   }
 
-  navigateToDetails(id: number) {
+  navigateToDetails(id: string) {
     this.router.navigate([]).then(result => { window.open(`/details/${id}`, '_blank'); });
   }
 }

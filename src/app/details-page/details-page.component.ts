@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/services/data.service';
+import { ActivatedRoute, ParamMap } from '@angular/router'
+import { Organization } from 'src/models/Organization';
+import { UserCustomFields } from 'src/models/UserCustomFields';
 
 @Component({
   selector: 'app-details-page',
@@ -7,24 +10,43 @@ import { DataService } from 'src/services/data.service';
   styleUrls: ['./details-page.component.scss']
 })
 export class DetailsPageComponent implements OnInit {
-  organizations: any;
+  organizations: Organization;
   viewFav: boolean = false;
   favoriteArray: any[] = [];
   isBookmark: boolean = false;
-  availableFormData: any;
+  availableFormData: UserCustomFields[];
   public selectedTabIndex = 0;
-  public formData:any = [];
+  public id: any;
 
-  constructor(private service: DataService) { }
+  constructor(private service: DataService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getOrganizationById();
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      this.id = params.get('id');
+      this.getOrganizationById();
+    })
     this.getForms();
   }
 
   getOrganizationById() {
-    this.service.getOrganizations().subscribe((res) => {
-      this.organizations = res.Organization[1];
+    this.service.getOrganizationById(this.id).subscribe((res) => {
+      // if (res.error == null) {
+      // let response: Organization = res.response;
+      // let totalrating = 0;
+      // response.userRatingAndFavourite.some(x => {
+      //   totalrating += x.rating;
+      // })
+      // let avgrating = totalrating / response.userRatingAndFavouriteCount
+      // response.avgrating = avgrating;
+      // this.organizations = response;
+      // }
+      let totalrating = 0;
+      res[this.id - 1].userRatingAndFavourite.some(x => {
+        totalrating += x.rating;
+      })
+      let avgrating = totalrating / res[this.id - 1].userRatingAndFavouriteCount
+      res[this.id - 1].avgrating = avgrating;
+      this.organizations = res[this.id - 1];
     })
   }
 
@@ -42,8 +64,4 @@ export class DetailsPageComponent implements OnInit {
       this.availableFormData = res;
     })
   }
-
-  // public tabChanged(event: MatTabChangeEvent) {
-  //   this.selectedTabIndex = event.index;
-  // }
 }
