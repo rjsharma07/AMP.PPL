@@ -3,7 +3,7 @@ import { DataService } from 'src/services/data.service';
 import { Result } from 'src/models/common';
 import { StarRatingComponent } from 'ng-starrating';
 import { Router } from '@angular/router';
-import { Organization } from 'src/models/Organization';
+import { Response } from 'src/models/Organization';
 
 @Component({
   selector: 'app-partner-locator',
@@ -20,7 +20,7 @@ export class PartnerLocatorComponent implements OnInit {
   isBookmark: boolean = false;
   isFavourite: boolean = false;
   filteredArray: Result[] = [];
-  organizations: Organization[];
+  organizations: Response[];
   bookmarksAndRatings: any[] = [];
   countries: any[] = [];
   availableFilters: any = {};
@@ -35,9 +35,9 @@ export class PartnerLocatorComponent implements OnInit {
 
   getOrganizations() {
     this.service.getOrganizations(this.availableFilters).subscribe((res) => {
-      // if (res.error == null) {
-      //   let response: any = res.response;
-        res.map((org: Organization) => {
+      if (res.error == null) {
+        let response: any = res.response;
+        response.map((org: Response) => {
           if (!this.countries.some(country => country === org.address.country)) {
             this.countries.push(org.address.country);
           }
@@ -48,9 +48,8 @@ export class PartnerLocatorComponent implements OnInit {
           let avgrating = totalrating / org.userRatingAndFavouriteCount
           org.avgrating = avgrating;
         });
-        
-        this.organizations = res;
-      // }
+        this.organizations = response;
+      }
     })
   }
 
@@ -77,7 +76,7 @@ export class PartnerLocatorComponent implements OnInit {
   }
 
   bookmark(event: any) {
-    event.userRatingAndFavourite.filter((item: { userId: string, favourite: boolean }) => item.userId === '11').forEach((item: { favourite: any; }) => {item.favourite = !item.favourite; this.itemisfavourite = item.favourite});
+    event.userRatingAndFavourite.filter((item: { userId: string, favourite: boolean }) => item.userId === '11').forEach((item: { favourite: any; }) => { item.favourite = !item.favourite; this.itemisfavourite = item.favourite });
   }
 
   navigateToDetails(id: string) {

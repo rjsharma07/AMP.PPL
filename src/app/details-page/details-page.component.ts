@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/services/data.service';
 import { ActivatedRoute, ParamMap } from '@angular/router'
-import { Organization } from 'src/models/Organization';
+import { Organization, Response } from 'src/models/Organization';
 import { UserCustomFields } from 'src/models/UserCustomFields';
 
 @Component({
@@ -10,7 +10,7 @@ import { UserCustomFields } from 'src/models/UserCustomFields';
   styleUrls: ['./details-page.component.scss']
 })
 export class DetailsPageComponent implements OnInit {
-  organizations: Organization;
+  organizations: Response;
   viewFav: boolean = false;
   favoriteArray: any[] = [];
   isBookmark: boolean = false;
@@ -30,23 +30,20 @@ export class DetailsPageComponent implements OnInit {
 
   getOrganizationById() {
     this.service.getOrganizationById(this.id).subscribe((res) => {
-      // if (res.error == null) {
-      // let response: Organization = res.response;
-      // let totalrating = 0;
+      if (res.error == null) {
+        // For JSON File
+      let response: any = res.response[0];
+      // For Api
+      // let response: any = res.response;
+
+      let totalrating = 0;
       // response.userRatingAndFavourite.some(x => {
       //   totalrating += x.rating;
       // })
-      // let avgrating = totalrating / response.userRatingAndFavouriteCount
-      // response.avgrating = avgrating;
-      // this.organizations = response;
-      // }
-      let totalrating = 0;
-      res[this.id - 1].userRatingAndFavourite.some(x => {
-        totalrating += x.rating;
-      })
-      let avgrating = totalrating / res[this.id - 1].userRatingAndFavouriteCount
-      res[this.id - 1].avgrating = avgrating;
-      this.organizations = res[this.id - 1];
+      let avgrating = totalrating / response.userRatingAndFavouriteCount
+      response.avgrating = avgrating;
+      this.organizations = response;
+      }
     })
   }
 

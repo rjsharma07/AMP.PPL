@@ -1,160 +1,163 @@
-[
-  {
-    "id": "1",
-    "organizationName": "Praecipio",
-    "aboutUs": "Praecipio is a cloud-first business and technology consulting firm specializing in strategic Cloud transformations, Enterprise Agility, DevOps, Application Development and Modern Service Management. Praecipio is an enterprise-level strategic advisor across the Atlassian platform focused on helping businesses drive revenue and fuel growth.",
-    "currency": "USD",
-    "thumbnail": "https://demo.mindmatrix.net/timg400/co0jxic8k2pdq/thumb_400-5dbc1b47-bfa8-9489-a301-16101ccc3bf7.png",
-    "websiteUrl": "https://www.praecipio.com/solutions/atlassian",
-    "createdBy": "Nice",
-    "createdOn": "2023-03-24T04:38:54.234+00:00",
-    "updatedOn": "2023-03-24T04:38:54.234+00:00",
-    "address": {
-      "address1": "4925",
-      "address2": "Rosemont",
-      "address3": "Avenue",
-      "city": "Austin",
-      "state": "Texas",
-      "country": "US",
-      "zipcode": "92618"
-    },
-    "contact": {
-      "fax": "",
-      "email": "support@praecipio.com",
-      "telephone": "9590990998"
-    },
-    "socialMedia": {
-      "linkedin": "",
-      "facebook": "",
-      "twitter": ""
-    },
-    "userRatingAndFavouriteCount": 3,
-    "userRatingAndFavourite": [
-      {
-        "userId": "10",
-        "rating": 3,
-        "favourite": true
+{
+  "error": null,
+  "response": [
+    {
+      "id": "abf7ae37-c5b2-40a7-b474-5b03ea8719ed",
+      "name": "Praecipio",
+      "aboutUs": "Praecipio is a cloud-first business and technology consulting firm specializing in strategic Cloud transformations, Enterprise Agility, DevOps, Application Development and Modern Service Management. Praecipio is an enterprise-level strategic advisor across the Atlassian platform focused on helping businesses drive revenue and fuel growth.",
+      "currency": "USD",
+      "thumbnail": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAa4AAAB1CAMAAAAhpfXwAAAAwFBMVEX///8AAADHUSf09PT6+vqwsLDDQAB1dXUnJyfGTSDQc1fPz89TU1P++vlnZ2fGTyPFSBTZ2dlhYWH78e3mtabNZEDir6OqqqrHx8dCQkL249zFSRikpKTLXzzERQ/t7e2VlZXm5ubAwMD46uWDg4PV1dUVFRUhISEvLy+NjY06OjrPbEvLWzNxcXENDQ2IiIi4uLjhp5by2dLVgGXuz8Xdm4fakn1MTEzrxbjVhW/UfGHrx77CNwDYjHPdno7Qb1Cy5QlzAAALb0lEQVR4nO2d61rqOhCGgdZKEWy1IEqhHIrISZfAQtG11fu/q91jMkmTHlhscD/O+wtImrT5mslkkpZSCUEQBEEQBEEQBEEQBEEQBEEQBEEQBEGQH0zDslzXtSzr1CeCZNBwd59vi96yYlSWvcXb585tnPqUEAlu86WlObZuxOi2o7Vemu6pTwxJYDXfHcc2KjyGJ9l7E+3it8Ldao6ekCpGd7QtdrFvQ+fDsaVahdjOGwr2LWisjCyxAsH0Fbodp2e9MJMjlgjDWaxPfbI/nqYtH7N4dKN56tP92VgfWr6uFXewD/QRT4fbMguI5WMu0OM4FZ1lfkMYo1dQr9PQ0Yur5RlErXPqE/+RuJV91PL00rF/HR+LtYSmENvWk66I3kJ/4+jUmLmx3RSyfakZyeiUvcEJ85FZOYwCmixfw/2zSYxxzuqYp4qUfrNqyeXy6Wy4UL2h/z7WiSIejZZeQC5P3R4bVtRbaA6PCGcKQ7kazRueXRwlbLyzR6A5PCKdhL/ny2UtHd4zdDRtE9m9rcYcYOLs62i8J1ZMArlaovihbrbCLrZl+pdeO+0l7IXS7/ePVNHV4WpaJ9e35HL5goWWr8aMd1rqasrw8Rwy7t5eMenqgM3QbV9cSYryLv6S5HsccmnqmC0oQuXLUC8G9fmDx/T1fASr6pKiL8jJXzJljbv8uV2QOruJk1XvB/Xpw0PZq6k+uE+cxx5sislVMZwX37OwmIUx/S2tiotygrsBuN/U10T6U70ruSG7INeAS1MfkjV5KGyu/mDOJNdHpB2vyY9n8U9XyXN7bcMSz0jCNXc6SpetaC67pvx0BMGnUC7dCAQhW6FIsvPpH9hk4vdaWixKIFe5/EAapKTWRRmqbWFhMO8dd7+q1Wy51PYkkaEed9NccnlMR7RAKtclezZn0+Q1nZX+jk/Bqomkd5mxss7OP7IHM5hpzqFQLtA3xHKVy4+CsoZMjns2MYdcyrUoR2z68spVLtN7SSKX8ii+Jq6rF8QQ2Lxg3tXxaJpfHcqf98gAGks/Tsh0L6OXMveSyEUuWSZXeZAsa8BkGLOJ2XINhTnmcY78cpVJ/xLLpcwlx9X/Ri8+oEHl8tlpNUaFdRQJNrfeF3cJlU5zNmRylSNTLpWrnPA4uGFuylrDTLmUpH3yOY/TC8hVjjOI5bqTHVZ+lTdUJi+ifU9Erq3DyuWPaLR7beCwZ2/llUjlijqHXK6EOeQb74JJzZRLaAlBKUXkim2DUK6x7KgyuDmKUxH5f1qpEVKzA7ks72O0TNIJLaDzx/vchD3TWMitoVSuyFWQy1Xmfd9fqZeeJddIXMmUOGxF5LqLMojkkh4UwI24+XE1gVoVo9UL8ea/DT/A4X9u1QJztw26o/3hfVwzhtSU+4ZUrruhotxSq/4UGjsg17OiKPd30itTeBszYZKBXGe3FJLOmMKqN6EKK6aap8pVVRXlGUwVogwiuS5hRZez7oz5oV5MJMpONHRR5z2SywmfaTD9CNRaC/uS97HDdM3QXRQC5FKZr5EVAnIFTavQDG1ZSTEjmAzk4mfQ/NHzkd/n1GF7DstIl8v/elvmqxDINQQVRXP5IRRMdHJ5+MzYshvKFbmA+rtv70K5Kt4nl3HlUwYvIFdgl+hNHt74vFwl2v84uZJDAjO6Zch1Tg+7JgZS7T6IxjaZXP0n8j3q+QK5gPtKey6ofSBtqnTeMnZoMHIZFX8AC/zBUK5lzsBGYbmeuO8xanzkAz2CSadyDc5i2kQ5Oj+eQ28ahBoOJBftSVU6+AKvlA9/5KQhizSJe1fgTZiS3qV/SX0NTq57epuJjSHoQ6wnTyzRK23EZ5AudjViW6eWhQdBDmMM+3SAg2FE0Of2m3s1sjaCQrmMf/xd1qFzYvRKfO8yllJfA8jlGfFnen8mXY3r80fGm2A9Q3LXjmlPgZOddLnA0CWL3WXJNYQRrChDUq4hzQNtMvh5P7ksoWPoefIhsVz/BN/MYE/8TaCdvikRp55IK130kjvyYbrckef8dCL0BRgJgKLpclE3/lUWGz+MIw90YUqnP7PTxbyI/fiK44ZRp8gzDOJRnfDBZCv0Bh1fOs6tlK9RSuUahOl5oxqkvSfDUpvkAd5Iulz0kPoh5JJPk4c0EywcGOP95FqL5YqjGlokF+AtcCWNYLP1B+tWOoXlmkSmQirXjC2HNKY3VPfL4AtpkFS5nskvh5DrIS7jeL0rXa5OQi4rUsj2vcBGj/VT5FFDmVzxgC+Ti5tO0rtzUILuJR2I8hrDh73GLnGp6XLBisDP+028OilyNRqesQvlikJS1k20BcrQfWV+c35K4d41iNMlcvGrwLRd7lVFpe4j9b7S5QINz84PKPnlopUKPEOaDc4bwcLqfq6GZOwK1rveF704qtFaBJjxArITzIhr3JzNLibXhMYSxHIN5G059aDKUGsI5Po1iJmRAZCWzfRbVRVUkbE8CfROygVCZXNQDf21ut82gEaKXD1/g1QUhNKZ5WQ72EjDdy7DyOHI08s4gw4dlWtCvfw5d01KspQIYlqAXCJzB5agfoHaL+kQmU+uO2baJpgmCwMYM/ojt0yXl4Y4ZEhXk5lpcqxW+BADH8vPNe+qdn3OblljwIR4nwRXGgA3abCQjBlBKLi0WY/6nNKGfn2qXJN2cPIjqY0mcsHI/zjKDuNnsll6BpKoRppchhY+wvDCz7BTVlC4EG8CIFcbLpGwTS5fZSHNndG7+sxR03G7Ow47HDGX2VGNJAK56ATR53w0emaDnbKGymIjjBnK5TJM/SY4sJkwowVihjyMXEMaN2BCa0OpWrS5gVxVyoQ0/aXkeGKcDiRXiiXwGUhbKgNxRF4gl6F7mE7rM7R4u+T7HApE5HkYuaDhhw4cu0mDJR6JJMuTpOn7yU1QAfn2ahSQqyTeQRcyEZeTA/F6V1Iuo7d5f/9YraM15abgfVH51rtyyDWkFzYFeZJ7EUFzR9YwSy4Q2GCJ74uDySUN5JTls4hsxEHDpFxM17E+HMGQl281OYdcsHvR2Q1w0OoRIBYcRQky5YLuGSRu6IPJlWIOxdsn87EU79Xg5TLBK0+aS5EFzbdXI5dc0HUm3gZtZzKiDemAHu/RyZRLotdTdF6Hk0uq19+oFW29yJSLBJis5lLUtfLuhMolVwlsqIxD8mCOSRufzqOi4SCHXOLtNbFnfUC5SreigXKyvyX0ke4z5IzhrrNe/95tW5rsnVH59hnmk2sIri+6PLCkSaP0Yz5bHrlK6jmffplvJ1RBuUpq0jsayBspH7JdvJxnqNu2bYreSBnbwrQnKKlcU7FctOuEgxWYYlXDI0CHE5UbWUiwRAHh7Y/SBX5L9RdYpaEVE7nAjSK+Ouq+JNb01TO4sfG6/fePoKTvkRdFNYSk7pFXFYI4A01X+QOiXxRhEYlfFSGCVlIuurNf49lg1GcSVcExWScvOgak3rcHs/Fs1r46xONCKU+gFJIr9QkU5HAINkMVl8tOfb4LORzrQ8iFr4Y6GsnHJwvLpb+f+iJ+Dp2Ec1hULsPGket4CN+rUUQufK/GMRG+tSZ8r4bzlUMuPe3JSeTgrDk9wrfWrHya2XIZNr4T6rjcsIF57p1QGXKhKTw67JtrCsll4pTr6LDDVxG59AW+LfT4MG93tXfMW0JvUh4CC5/5Qo4N86ZrhyGlcxkYKzwRbm+P98jL9xYi/zHWoui/NDhfaAlPR+H/QHlBtU4K/sPQ/wv8/67/F41mJde/41Wwa30P3K2Z+d+TJo5a3wdrq5mp/+z6iWJ9K6ybmqeY4H+TdVOr3aBY3w93tVlqjmnr4ZOTum6bjrbcrHBe/F1puLvVy+artawsW1+bl9XOxX717WlYlmtZuF6MIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiSi38BXZzyeX9l/kIAAAAASUVORK5CYII=",
+      "websiteUrl": "https://www.praecipio.com/solutions/atlassian",
+      "createdBy": "Nice",
+      "createdOn": "2023-03-30T07:12:11.538Z",
+      "updatedOn": "2023-03-30T07:12:11.538Z",
+      "address": {
+        "address1": "4925",
+        "address2": "Rosemont",
+        "address3": "Avenue",
+        "city": "Austin",
+        "state": "Texas",
+        "country": "US",
+        "zipcode": "92618"
       },
-      {
-        "userId": "11",
-        "rating": 4,
-        "favourite": false
+      "contact": {
+        "fax": "string",
+        "email": "support@praecipio.com",
+        "telephone": "9590990998"
       },
-      {
-        "userId": "12",
-        "rating": null,
-        "favourite": true
-      }
-    ],
-    "supplier": {
-      "isSupplier": "true",
-      "supplierType": "Preferred Supplier"
-    },
-    "partnershipCount": 2,
-    "partnership": [
-      {
-        "companyId": "16",
-        "partnerType": "Bronze Partner",
-        "partnerLevel": "2"
+      "socialMedia": {
+        "linkedin": "",
+        "facebook": "",
+        "twitter": ""
       },
-      {
-        "companyId": "18",
-        "partnerType": "Bronze Partner",
-        "partnerLevel": "2"
-      }
-    ],
-    "category": [
-      {
-        "specializations": [
-          "Itsm",
-          "Cloud"
-        ],
-        "products": [
-          "Bamboo",
-          "Fisheye",
-          "Jira Service Management"
-        ],
-        "services": [
-          "Installation",
-          "Managed Hosting"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "2",
-    "organizationName": "Blended Perspectives",
-    "aboutUs": "Strategy Implementation,Training & Hosting; Cloud, Server and Data Center expertise. JIRA: configuration, integration, process definition, Agile/ project/ portfolio management. Service Desk and ITIL consulting. Confluence: designed and implemented intranets, wikis and workflows since 2001. Extensive add on expertise.",
-    "currency": "USD",
-    "thumbnail": "https://demo.mindmatrix.net/timg400/t4rudaao96de/thumb_400-image_25.png",
-    "websiteUrl": "https://www.blendedperspectives.com/",
-    "createdBy": "Nice",
-    "createdOn": "2023-03-24T04:38:54.234+00:00",
-    "updatedOn": "2023-03-24T04:38:54.234+00:00",
-    "address": {
-      "address1": "1781  Road",
-      "address2": "Gateway",
-      "address3": "Road",
-      "city": "Ontario",
-      "state": "Toronto",
-      "country": "Canada",
-      "zipcode": "97230"
-    },
-    "contact": {
-      "fax": "",
-      "email": "hello@blendedperspectives.com",
-      "telephone": "(416)273-6883"
-    },
-    "socialMedia": {
-      "linkedin": "",
-      "facebook": "",
-      "twitter": ""
-    },
-    "userRatingAndFavouriteCount": 2,
-    "userRatingAndFavourite": [
-      {
-        "userId": "10",
-        "rating": 3,
-        "favourite": true
+      "userRatingAndFavouriteCount": 3,
+      "userRatingAndFavourite": [
+        {
+          "userId": "10",
+          "rating": 3,
+          "favourite": true
+        },
+        {
+          "userId": "11",
+          "rating": 5,
+          "favourite": true
+        },
+        {
+          "userId": "12",
+          "rating": 4,
+          "favourite": false
+        }
+      ],
+      "supplier": {
+        "isSupplier": true,
+        "supplierType": "Preferred Supplier"
       },
-      {
-        "userId": "11",
-        "rating": 4,
-        "favourite": false
-      }
-    ],
-    "supplier": {
-      "isSupplier": "true",
-      "supplierType": "Preferred Supplier"
+      "partnershipCount": 2,
+      "partnership": [
+        {
+          "companyId": "16",
+          "partnerType": "Bronze Partner",
+          "partnerLevel": "2"
+        },
+        {
+          "companyId": "18",
+          "partnerType": "Bronze Partner",
+          "partnerLevel": "2"
+        }
+      ],
+      "category": [
+        {
+          "specializations": [
+            "Itsm",
+            "Cloud"
+          ],
+          "products": [
+            "Bamboo",
+            "Fisheye",
+            "Jira Service Management"
+          ],
+          "services": [
+            "Installation",
+            "Managed Hosting"
+          ]
+        }
+      ]
     },
-    "partnershipCount": 2,
-    "partnership": [
-      {
-        "companyId": "12",
-        "partnerType": "Bronze Partner",
-        "partnerLevel": "2"
+    {
+      "id": "b0b5dc52-f7f3-4b9c-986d-c9ae5f418f11",
+      "name": "Blended Perspectives",
+      "aboutUs": "Strategy Implementation,Training & Hosting; Cloud, Server and Data Center expertise. JIRA: configuration, integration, process definition, Agile/ project/ portfolio management. Service Desk and ITIL consulting. Confluence: designed and implemented intranets, wikis and workflows since 2001. Extensive add on expertise.",
+      "currency": "USD",
+      "thumbnail": "data:image/png;base64,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",
+      "websiteUrl": "https://www.blendedperspectives.com/",
+      "createdBy": "Nice",
+      "createdOn": "2023-03-30T07:12:11.538Z",
+      "updatedOn": "2023-03-30T07:12:11.538Z",
+      "address": {
+        "address1": "1781  Road",
+        "address2": "Gateway",
+        "address3": "Road",
+        "city": "Ontario",
+        "state": "Toronto",
+        "country": "Canada",
+        "zipcode": "97230"
       },
-      {
-        "companyId": "14",
-        "partnerType": "Bronze Partner",
-        "partnerLevel": "2"
-      }
-    ],
-    "category": [
-      {
-        "specializations": [
-          "Agile At Scale"
-        ],
-        "products": [
-          "Bitbucket",
-          "Sourcetree",
-          "Trello"
-        ],
-        "services": [
-          "Change Management",
-          "Custom Development"
-        ]
-      }
-    ]
-  }
-]
+      "contact": {
+        "fax": "",
+        "email": "hello@blendedperspectives.com",
+        "telephone": "(416)273-6883"
+      },
+      "socialMedia": {
+        "linkedin": "",
+        "facebook": "",
+        "twitter": ""
+      },
+      "userRatingAndFavouriteCount": 2,
+      "userRatingAndFavourite": [
+        {
+          "userId": "10",
+          "rating": 3,
+          "favourite": true
+        },
+        {
+          "userId": "11",
+          "rating": 4,
+          "favourite": false
+        }
+      ],
+      "supplier": {
+        "isSupplier": true,
+        "supplierType": "Preferred Supplier"
+      },
+      "partnershipCount": 2,
+      "partnership": [
+        {
+          "companyId": "12",
+          "partnerType": "Bronze Partner",
+          "partnerLevel": "2"
+        },
+        {
+          "companyId": "14",
+          "partnerType": "Bronze Partner",
+          "partnerLevel": "2"
+        }
+      ],
+      "category": [
+        {
+          "specializations": [
+            "Agile At Scale"
+          ],
+          "products": [
+            "Bitbucket",
+            "Sourcetree",
+            "Trello"
+          ],
+          "services": [
+            "Change Management",
+            "Custom Development"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,9 @@
 export class Organization {
+  error: string;
+  response: Response[];
+}
+
+export class Response {
   id: string;
   name: string;
   aboutUs: string;
@@ -18,27 +23,6 @@ export class Organization {
   partnership: Partnership[];
   category: Category[];
   avgrating: number;
-
-  constructor(data: any) {
-    this.id = data.id;
-    this.name = data.name;
-    this.aboutUs = data.aboutUs;
-    this.currency = data.currency;
-    this.thumbnail = data.thumbnail;
-    this.websiteUrl = data.websiteUrl;
-    this.createdBy = data.createdBy;
-    this.createdOn = new Date(data.createdOn);
-    this.updatedOn = new Date(data.updatedOn);
-    this.address = data.address;
-    this.contact = data.contact;
-    this.socialMedia = data.socialMedia;
-    this.userRatingAndFavouriteCount = data.userRatingAndFavouriteCount;
-    this.userRatingAndFavourite = data.userRatingAndFavourite;
-    this.supplier = data.supplier;
-    this.partnershipCount = data.partnershipCount;
-    this.partnership = data.partnership;
-    this.category = data.category;
-  }
 }
 
 export class Address {
