@@ -20,7 +20,7 @@
         </mat-expansion-panel-header>
         <div *ngFor="let filter of item.filters" class="options">
             <div>
-                <mat-checkbox class="example-margin" (change)="filterOrganization($event, filter.Name)">
+                <mat-checkbox class="example-margin" (change)="filterOrganization($event, filter.name)">
                     {{filter.name}}
                 </mat-checkbox>
             </div>
