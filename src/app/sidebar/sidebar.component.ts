@@ -22,7 +22,7 @@ export class SidebarComponent implements OnInit {
   selectedFilters: string[];
   availableFilters: AvailableFilters = {
     countryName: "",
-    appliedFilterIds: []
+    appliedFilter: []
   }
 
   constructor(private service: DataService) { }
@@ -42,8 +42,8 @@ export class SidebarComponent implements OnInit {
   toggleSpecialization(filter: any) {}
 
   filterOrganization(event: any, filter: string) {
-    event.checked ? this.availableFilters.appliedFilterIds.push(filter) : 
-      this.availableFilters.appliedFilterIds.splice(this.availableFilters.appliedFilterIds.indexOf(filter), 1);
+    event.checked ? this.availableFilters.appliedFilter.push(filter) : 
+      this.availableFilters.appliedFilter.splice(this.availableFilters.appliedFilter.indexOf(filter), 1);
     this.filter.emit(this.availableFilters);
   }
 

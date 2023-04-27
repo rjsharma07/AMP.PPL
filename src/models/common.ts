@@ -32,5 +32,5 @@ export interface Result {
 
 export interface AvailableFilters {
     countryName: string,
-    appliedFilterIds: string[]
+    appliedFilter: string[]
 }
