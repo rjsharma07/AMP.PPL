@@ -33,7 +33,7 @@ export class SidebarComponent implements OnInit {
 
   getFilters() {
     this.service.getFilters().subscribe((res) => {
-      this.filters = res.CategoryFilters;
+      this.filters = res.response[0].categoryFilters;
     });
   }
 
