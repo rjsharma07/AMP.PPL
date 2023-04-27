@@ -22,18 +22,18 @@ export class DataService {
 
     getOrganizations(organizationQuery: any = {}): Observable<Organization> {
         // const url = this.baseUrl + "GetOrganizationByQuery";
-        // return this.http.post(url, organizationQuery);
+        // return this.http.post<Organization>(url, organizationQuery);
         return this.http.get<Organization>("../assets/Json_Files/Org.json");
     }
 
     getOrganizationById(id: any): Observable<Organization> {
     //   const url = this.baseUrl + "GetOrganizationById?Id="+id;
-    //   return this.http.get(url);
+    //   return this.http.get<Organization>(url);
       return this.http.get<Organization>("../assets/Json_Files/Org.json");
   }
 
-    getForms(): Observable<UserCustomFields[]> {
-        return this.http.get<UserCustomFields[]>("../assets/Json_Files/UserCustomFields.json");
+    getForms(): Observable<UserCustomFields> {
+        return this.http.get<UserCustomFields>("../assets/Json_Files/UserCustomFields.json");
     }
 
     private handleError(error: HttpErrorResponse) {

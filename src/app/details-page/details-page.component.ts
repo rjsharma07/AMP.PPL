@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/services/data.service';
 import { ActivatedRoute, ParamMap } from '@angular/router'
 import { Organization, Response } from 'src/models/Organization';
-import { UserCustomFields } from 'src/models/UserCustomFields';
+import { UserCustomFields, FormResponse } from 'src/models/UserCustomFields';
 
 @Component({
   selector: 'app-details-page',
@@ -14,7 +14,7 @@ export class DetailsPageComponent implements OnInit {
   viewFav: boolean = false;
   favoriteArray: any[] = [];
   isBookmark: boolean = false;
-  availableFormData: UserCustomFields[];
+  availableFormData: FormResponse[];
   public selectedTabIndex = 0;
   public id: any;
 
@@ -32,17 +32,17 @@ export class DetailsPageComponent implements OnInit {
     this.service.getOrganizationById(this.id).subscribe((res) => {
       if (res.error == null) {
         // For JSON File
-      let response: any = res.response[0];
-      // For Api
-      // let response: any = res.response;
+        let response: any = res.response[0];
+        // For Api
+        // let response: any = res.response;
 
-      let totalrating = 0;
-      // response.userRatingAndFavourite.some(x => {
-      //   totalrating += x.rating;
-      // })
-      let avgrating = totalrating / response.userRatingAndFavouriteCount
-      response.avgrating = avgrating;
-      this.organizations = response;
+        let totalrating = 0;
+        // response.userRatingAndFavourite.some(x => {
+        //   totalrating += x.rating;
+        // })
+        let avgrating = totalrating / response.userRatingAndFavouriteCount
+        response.avgrating = avgrating;
+        this.organizations = response;
       }
     })
   }
@@ -58,7 +58,10 @@ export class DetailsPageComponent implements OnInit {
 
   getForms() {
     this.service.getForms().subscribe((res) => {
-      this.availableFormData = res;
+      if (res.error == null) {
+        let response: any = res.response;
+        this.availableFormData = response;
+      }
     })
   }
 }

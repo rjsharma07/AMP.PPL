@@ -1,4 +1,9 @@
 export class UserCustomFields {
+    error: string;
+    response: FormResponse[];
+}
+
+export class FormResponse {
     id: string;
     tabIndex: number;
     tabName: string;
