@@ -3,6 +3,7 @@ import { DataService } from 'src/services/data.service';
 import { ActivatedRoute, ParamMap } from '@angular/router'
 import { Organization, Response } from 'src/models/Organization';
 import { UserCustomFields, FormResponse } from 'src/models/UserCustomFields';
+import { UpdatedCustomField, FormData } from 'src/models/UpdatedCustomFields';
 
 @Component({
   selector: 'app-details-page',
@@ -15,6 +16,7 @@ export class DetailsPageComponent implements OnInit {
   favoriteArray: any[] = [];
   isBookmark: boolean = false;
   availableFormData: FormResponse[];
+  updatedFormData: FormData[];
   public selectedTabIndex = 0;
   public id: any;
 
@@ -25,7 +27,8 @@ export class DetailsPageComponent implements OnInit {
       this.id = params.get('id');
       this.getOrganizationById();
     })
-    this.getForms();
+    // this.getForms();
+    this.getFormsById();
   }
 
   getOrganizationById() {
@@ -61,6 +64,18 @@ export class DetailsPageComponent implements OnInit {
       if (res.error == null) {
         let response: any = res.response;
         this.availableFormData = response;
+      }
+    })
+  }
+
+  getFormsById() {
+    this.service.getFormsById().subscribe((res) => {
+      if (res.error == null) {
+        let response: any = res.response;
+        response.forEach((item: any) => {
+          item.field.sort((a: any, b: any) => a.fieldSequence - b.fieldSequence)
+        })
+        this.updatedFormData = response;
       }
     })
   }

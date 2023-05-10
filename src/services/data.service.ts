@@ -3,6 +3,7 @@ import { Observable, of, throwError, catchError } from 'rxjs';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Organization } from 'src/models/Organization';
 import { UserCustomFields } from 'src/models/UserCustomFields';
+import { UpdatedCustomField } from 'src/models/UpdatedCustomFields';
 @Injectable()
 export class DataService {
 
@@ -34,6 +35,10 @@ export class DataService {
 
     getForms(): Observable<UserCustomFields> {
         return this.http.get<UserCustomFields>("../assets/Json_Files/UserCustomFields.json");
+    }
+
+    getFormsById(): Observable<UpdatedCustomField>{
+      return this.http.get<UpdatedCustomField>("../assets/Json_Files/UpdatedFieldsByQuery.json")
     }
 
     private handleError(error: HttpErrorResponse) {

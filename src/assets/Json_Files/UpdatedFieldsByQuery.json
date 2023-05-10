@@ -1,0 +1,86 @@
+{
+    "error": null,
+    "response": [
+      {
+        "tabId": "3fa85f64-5717-4562-b3fc-2c963f66afa7",
+        "tabName": "Basic Information",
+        "tabSequence": 1,
+        "createdOn": "2023-05-04T10:46:38.67Z",
+        "isDeleted": false,
+        "field": [
+          {
+            "id": "3ba2512a-7c5c-46b5-bf14-46fc0ecdaf1b",
+            "fieldSequence": 2,
+            "parserName": "firstname",
+            "displayName": "First Name",
+            "fieldType": "text",
+            "defaultValue": "Ganesh",
+            "required": true,
+            "charMin": 0,
+            "charMax": 50,
+            "createdOn": "2023-05-03T09:13:24.633Z",
+            "updatedOn": "2023-05-03T09:13:24.633Z",
+            "isDeleted": false,
+            "isFieldGroup": false,
+            "groupParserName": "",
+            "toolTipSetting": {
+              "showToolTip": true,
+              "toolTipText": "Enter the First Name",
+              "toolTipIcon": true
+            }
+          },
+          {
+            "id": "b47549aa-5792-4421-8db5-f01c47db8922",
+            "fieldSequence": 1,
+            "parserName": "lastname",
+            "displayName": "Last Name",
+            "fieldType": "text",
+            "defaultValue": "Nagaraj",
+            "required": true,
+            "charMin": 0,
+            "charMax": 100,
+            "createdOn": "2023-05-03T09:13:24.633Z",
+            "updatedOn": "2023-05-03T09:13:24.633Z",
+            "isDeleted": false,
+            "isFieldGroup": false,
+            "groupParserName": "",
+            "toolTipSetting": {
+              "showToolTip": true,
+              "toolTipText": "Enter the last Name",
+              "toolTipIcon": true
+            }
+          }
+        ]
+      },
+      {
+        "tabId": "3fa85f64-5717-4562-b3fc-2a963f66afa4",
+        "tabName": "Contact Us",
+        "tabSequence": 2,
+        "createdOn": "2023-05-04T10:46:38.67Z",
+        "isDeleted": false,
+        "field": [
+          {
+            "id": "6e224219-7faf-4fa4-9a26-1282b0e723fb",
+            "fieldSequence": 1,
+            "parserName": "phonenumber",
+            "displayName": "Phone Number",
+            "fieldType": "text",
+            "defaultValue": null,
+            "required": true,
+            "charMin": 0,
+            "charMax": 10,
+            "createdOn": "2023-05-03T09:13:24.633Z",
+            "updatedOn": "2023-05-03T09:13:24.633Z",
+            "isDeleted": false,
+            "isFieldGroup": false,
+            "groupParserName": "",
+            "toolTipSetting": {
+              "showToolTip": true,
+              "toolTipText": "This the Phone Number",
+              "toolTipIcon": true
+            }
+          }
+        ]
+      }
+    ]
+  }
