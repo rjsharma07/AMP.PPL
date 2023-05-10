@@ -62,10 +62,12 @@
             </mat-tab> -->
             <mat-tab *ngFor="let tab of updatedFormData" label="{{tab.tabName}}">
                 <div class="tab-content">
-                    <div class="form-subcontainer">
-                        <div class="input-pane">
-                            <div *ngFor="let item of tab.field" class="input-field">
-                                <input type="{{item.fieldType}}" [value]="item.displayName +':  '+ item.defaultValue " class="input-box" />
+                    <div>
+                        <div>
+                            <div *ngFor="let item of tab.field">
+                                <!-- <input type="{{item.fieldType}}" [value]="item.displayName +':  '+ item.defaultValue " class="input-box" /> -->
+                                <div class="field-title">{{item.displayName}}</div>
+                                <div class="field-value">{{item.defaultValue}}</div>
                             </div>
                         </div>
                         </div>
