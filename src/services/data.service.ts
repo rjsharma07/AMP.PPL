@@ -39,7 +39,7 @@ export class DataService {
 
   getFormsById(CompanyId: string, ModuleId: any, UserId: string, ModuleRecordId: any): Observable<UpdatedCustomField> {
     // const url = this.baseUrl + `GetCustomFieldQuery?CompanyId=${CompanyId}&ModuleId=${ModuleId}&UserId=${UserId}&ModuleRecordId=${ModuleRecordId}`;
-    // return this.http.get<Organization>(url);
+    // return this.http.get<UpdatedCustomField>(url);
     return this.http.get<UpdatedCustomField>("../assets/Json_Files/UpdatedFieldsByQuery.json")
   }
 
